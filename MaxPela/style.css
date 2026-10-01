@@ -1,0 +1,2112 @@
+/* =========================================================
+   MAXPELA — SITE OFFICIEL
+   DARK FANTASY / ADVENTURE
+========================================================= */
+
+
+/* =========================================================
+   VARIABLES
+========================================================= */
+
+:root {
+
+    --background: #08090b;
+    --background-light: #101216;
+    --background-card: #14161a;
+
+    --gold: #c99b51;
+    --gold-light: #dfbb7b;
+
+    --text: #eee8dc;
+    --text-soft: #aaa8a2;
+    --text-dark: #777;
+
+    --border: #25282d;
+
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+
+body {
+
+    background: var(--background);
+
+    color: var(--text);
+
+    font-family:
+        "Inter",
+        Arial,
+        sans-serif;
+
+    line-height: 1.7;
+
+}
+
+
+img {
+
+    max-width: 100%;
+
+    display: block;
+
+}
+
+
+a {
+
+    color: inherit;
+
+    text-decoration: none;
+
+}
+
+
+button,
+a {
+
+    -webkit-tap-highlight-color: transparent;
+
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.navbar {
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    height: 76px;
+
+    z-index: 100;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 5vw;
+
+    background:
+        rgba(6, 7, 9, .82);
+
+    backdrop-filter:
+        blur(15px);
+
+    border-bottom:
+        1px solid rgba(255,255,255,.06);
+
+}
+
+
+.logo {
+
+    font-family: "Cinzel", serif;
+
+    font-weight: 800;
+
+    letter-spacing: .13em;
+
+    font-size: 20px;
+
+}
+
+
+.logo span {
+
+    color: var(--gold);
+
+    margin-right: 7px;
+
+}
+
+
+.navigation {
+
+    display: flex;
+
+    gap: 28px;
+
+}
+
+
+.navigation a {
+
+    color: #aaa;
+
+    font-size: 13px;
+
+    transition: .2s;
+
+}
+
+
+.navigation a:hover {
+
+    color: var(--gold-light);
+
+}
+
+
+.nav-button {
+
+    border:
+        1px solid var(--gold);
+
+    padding:
+        9px 17px;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: .12em;
+
+    color:
+        var(--gold-light);
+
+}
+
+
+/* =========================================================
+   GENERAL
+========================================================= */
+
+.section {
+
+    padding:
+        120px 9vw;
+
+}
+
+
+.eyebrow {
+
+    color:
+        var(--gold);
+
+    font-size:
+        11px;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        .24em;
+
+    margin-bottom:
+        14px;
+
+}
+
+
+.section-title {
+
+    max-width:
+        750px;
+
+    margin:
+        0 auto 60px;
+
+    text-align:
+        center;
+
+}
+
+
+.section-title.left {
+
+    margin-left:
+        0;
+
+    text-align:
+        left;
+
+}
+
+
+.section-title h2 {
+
+    font-family:
+        "Cinzel",
+        serif;
+
+    font-size:
+        clamp(36px, 5vw, 62px);
+
+    line-height:
+        1.1;
+
+    margin-bottom:
+        18px;
+
+}
+
+
+.section-title h2 span {
+
+    color:
+        var(--gold);
+
+}
+
+
+.section-title > p:last-child {
+
+    color:
+        var(--text-soft);
+
+}
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.button {
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    min-height:
+        50px;
+
+    padding:
+        0 23px;
+
+    border:
+        1px solid var(--gold);
+
+    font-size:
+        11px;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        .1em;
+
+    transition:
+        .25s;
+
+}
+
+
+.button-primary {
+
+    background:
+        var(--gold);
+
+    color:
+        #120e08;
+
+}
+
+
+.button-primary:hover {
+
+    background:
+        var(--gold-light);
+
+    transform:
+        translateY(-2px);
+
+}
+
+
+.button-secondary {
+
+    background:
+        transparent;
+
+    color:
+        var(--text);
+
+}
+
+
+.button-secondary:hover {
+
+    background:
+        rgba(255,255,255,.06);
+
+}
+
+
+.disabled {
+
+    opacity:
+        .5;
+
+    cursor:
+        not-allowed;
+
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+
+    min-height:
+        100vh;
+
+    position:
+        relative;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    overflow:
+        hidden;
+
+}
+
+
+.hero-background {
+
+    position:
+        absolute;
+
+    inset:
+        0;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            rgba(4,5,7,.98) 0%,
+            rgba(4,5,7,.82) 40%,
+            rgba(4,5,7,.42) 100%
+        ),
+
+        url("assets/astralys.png")
+        center / cover;
+
+    transform:
+        scale(1.03);
+
+}
+
+
+.hero-overlay {
+
+    position:
+        absolute;
+
+    inset:
+        0;
+
+    background:
+
+        linear-gradient(
+            0deg,
+            var(--background) 0%,
+            transparent 25%
+        );
+
+}
+
+
+.hero-content {
+
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    max-width:
+        720px;
+
+    margin-left:
+        10vw;
+
+    padding-top:
+        80px;
+
+}
+
+
+.hero h1 {
+
+    font-family:
+        "Cinzel",
+        serif;
+
+    font-size:
+        clamp(65px, 11vw, 145px);
+
+    line-height:
+        .9;
+
+    letter-spacing:
+        .06em;
+
+    font-weight:
+        800;
+
+    text-shadow:
+        0 15px 50px #000;
+
+}
+
+
+.hero h1 span {
+
+    color:
+        var(--gold);
+
+}
+
+
+.hero h2 {
+
+    margin-top:
+        28px;
+
+    font-family:
+        "Cinzel",
+        serif;
+
+    font-size:
+        clamp(21px, 3vw, 32px);
+
+    line-height:
+        1.35;
+
+    color:
+        #e4d8c2;
+
+}
+
+
+.hero-description {
+
+    max-width:
+        600px;
+
+    margin-top:
+        18px;
+
+    color:
+        #aaa9a4;
+
+}
+
+
+.hero-buttons {
+
+    display:
+        flex;
+
+    gap:
+        12px;
+
+    flex-wrap:
+        wrap;
+
+    margin-top:
+        30px;
+
+}
+
+
+.project-status {
+
+    margin-top:
+        25px;
+
+    color:
+        #858582;
+
+    font-size:
+        12px;
+
+}
+
+
+.status-dot {
+
+    display:
+        inline-block;
+
+    width:
+        8px;
+
+    height:
+        8px;
+
+    border-radius:
+        50%;
+
+    margin-right:
+        8px;
+
+    background:
+        #7fa45a;
+
+    box-shadow:
+        0 0 12px #7fa45a;
+
+}
+
+
+.scroll-indicator {
+
+    position:
+        absolute;
+
+    z-index:
+        3;
+
+    bottom:
+        25px;
+
+    left:
+        50%;
+
+    transform:
+        translateX(-50%);
+
+    font-size:
+        10px;
+
+    letter-spacing:
+        .2em;
+
+    color:
+        #777;
+
+}
+
+
+/* =========================================================
+   FEATURES
+========================================================= */
+
+.feature-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap:
+        18px;
+
+}
+
+
+.feature-card {
+
+    padding:
+        30px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #121418,
+            #0c0d10
+        );
+
+    border:
+        1px solid var(--border);
+
+    transition:
+        .25s;
+
+}
+
+
+.feature-card:hover {
+
+    border-color:
+        #765a32;
+
+    transform:
+        translateY(-4px);
+
+}
+
+
+.feature-icon {
+
+    font-size:
+        32px;
+
+    margin-bottom:
+        15px;
+
+}
+
+
+.feature-card h3 {
+
+    font-family:
+        "Cinzel",
+        serif;
+
+    font-size:
+        21px;
+
+    margin-bottom:
+        12px;
+
+}
+
+
+.feature-card p {
+
+    color:
+        #96979a;
+
+    font-size:
+        14px;
+
+}
+
+
+/* =========================================================
+   LORE BANNER
+========================================================= */
+
+.lore-banner {
+
+    min-height:
+        500px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    padding:
+        90px 12vw;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            rgba(6,7,8,.96),
+            rgba(6,7,8,.45)
+        ),
+
+        url("assets/world.png")
+        center / cover;
+
+    border-top:
+        1px solid #1e2023;
+
+    border-bottom:
+        1px solid #1e2023;
+
+}
+
+
+.lore-banner-content {
+
+    max-width:
+        700px;
+
+}
+
+
+.lore-banner h2 {
+
+    font-family:
+        "Cinzel",
+        serif;
+
+    font-size:
+        clamp(35px, 5vw, 62px);
+
+    line-height:
+        1.1;
+
+    margin-bottom:
+        22px;
+
+}
+
+
+.lore-banner p:not(.eyebrow) {
+
+    color:
+        #aaa;
+
+}
+
+
+.text-link {
+
+    display:
+        inline-block;
+
+    margin-top:
+        22px;
+
+    color:
+        var(--gold-light);
+
+    font-weight:
+        700;
+
+}
+
+
+/* =========================================================
+   LORE
+========================================================= */
+
+.lore-section {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        1.3fr .7fr;
+
+    gap:
+        80px;
+
+    align-items:
+        center;
+
+}
+
+
+.lore-text h2 {
+
+    font-family:
+        "Cinzel",
+        serif;
+
+    font-size:
+        clamp(35px, 5vw, 60px);
+
+    line-height:
+        1.1;
+
+    margin-bottom:
+        25px;
+
+}
+
+
+.lore-text p {
+
+    color:
+        #a2a2a0;
+
+    margin-bottom:
+        18px;
+
+}
+
+
+.lore-text blockquote {
+
+    border-left:
+        2px solid var(--gold);
+
+    padding-left:
+        18px;
+
+    color:
+        #ded3c0;
+
+    font-style:
+        italic;
+
+}
+
+
+.lore-card {
+
+    min-height:
+        340px;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    text-align:
+        center;
+
+    border:
+        1px solid #3b3020;
+
+    background:
+        radial-gradient(
+            circle,
+            #251e13,
+            #0d0e10 68%
+        );
+
+}
+
+
+.lore-symbol {
+
+    color:
+        var(--gold);
+
+    font-size:
+        55px;
+
+}
+
+
+.lore-card p {
+
+    color:
+        var(--gold);
+
+    letter-spacing:
+        .2em;
+
+    font-size:
+        10px;
+
+}
+
+
+.lore-card strong {
+
+    font-family:
+        "Cinzel",
+        serif;
+
+    font-size:
+        90px;
+
+}
+
+
+.lore-card span {
+
+    color:
+        #999;
+
+}
+
+
+/* =========================================================
+   DOWNLOAD
+========================================================= */
+
+.download-section {
+
+    background:
+        #0d0f12;
+
+}
+
+
+.download-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        1.5fr 1fr 1fr;
+
+    gap:
+        18px;
+
+}
+
+
+.download-card {
+
+    padding:
+        32px;
+
+    background:
+        #14161a;
+
+    border:
+        1px solid var(--border);
+
+}
+
+
+.download-card.featured {
+
+    border-color:
+        #71552e;
+
+}
+
+
+.download-tag {
+
+    color:
+        var(--gold);
+
+    font-size:
+        10px;
+
+    letter-spacing:
+        .18em;
+
+}
+
+
+.download-card h3 {
+
+    font-family:
+        "Cinzel",
+        serif;
+
+    font-size:
+        23px;
+
+    margin:
+        12px 0;
+
+}
+
+
+.download-card p {
+
+    color:
+        #999;
+
+    margin-bottom:
+        22px;
+
+}
+
+
+.download-card small {
+
+    display:
+        block;
+
+    color:
+        #707174;
+
+    margin-top:
+        14px;
+
+}
+
+
+.download-icon {
+
+    font-size:
+        32px;
+
+    margin-bottom:
+        12px;
+
+}
+
+
+/* =========================================================
+   INSTALLATION
+========================================================= */
+
+.installation {
+
+    margin-top:
+        50px;
+
+    padding:
+        35px;
+
+    border:
+        1px solid var(--border);
+
+}
+
+
+.installation h3 {
+
+    font-family:
+        "Cinzel",
+        serif;
+
+    font-size:
+        25px;
+
+    margin-bottom:
+        25px;
+
+}
+
+
+.installation-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap:
+        12px;
+
+}
+
+
+.installation-step {
+
+    padding:
+        20px;
+
+    background:
+        #111316;
+
+}
+
+
+.installation-step span {
+
+    color:
+        var(--gold);
+
+    font-family:
+        "Cinzel",
+        serif;
+
+    font-size:
+        25px;
+
+    font-weight:
+        700;
+
+}
+
+
+.installation-step p {
+
+    color:
+        #929395;
+
+    font-size:
+        13px;
+
+}
+
+
+code {
+
+    color:
+        #d6b37b;
+
+}
+
+
+/* =========================================================
+   NEWS
+========================================================= */
+
+.news-section {
+
+    background:
+        #070809;
+
+}
+
+
+.news-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap:
+        18px;
+
+}
+
+
+.news-card {
+
+    padding:
+        30px;
+
+    background:
+        #0e1013;
+
+    border-top:
+        2px solid #765326;
+
+}
+
+
+.news-card > span {
+
+    color:
+        var(--gold);
+
+    font-size:
+        10px;
+
+    letter-spacing:
+        .18em;
+
+}
+
+
+.news-card h3 {
+
+    font-family:
+        "Cinzel",
+        serif;
+
+    font-size:
+        24px;
+
+    margin:
+        12px 0;
+
+}
+
+
+.news-card p {
+
+    color:
+        #919296;
+
+    font-size:
+        14px;
+
+    margin-bottom:
+        20px;
+
+}
+
+
+.news-card a {
+
+    color:
+        var(--gold-light);
+
+    font-size:
+        13px;
+
+    font-weight:
+        700;
+
+}
+
+
+/* =========================================================
+   DUNGEONS
+========================================================= */
+
+.dungeon-section {
+
+    background:
+        #0b0c0e;
+
+}
+
+
+.dungeon-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap:
+        18px;
+
+}
+
+
+.dungeon-card {
+
+    min-height:
+        270px;
+
+    padding:
+        28px;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    justify-content:
+        flex-end;
+
+    background:
+        linear-gradient(
+            145deg,
+            #17181b,
+            #0c0d0f
+        );
+
+    border:
+        1px solid var(--border);
+
+}
+
+
+.dungeon-card > span {
+
+    color:
+        var(--gold);
+
+    font-size:
+        10px;
+
+    letter-spacing:
+        .18em;
+
+}
+
+
+.dungeon-card h3 {
+
+    font-family:
+        "Cinzel",
+        serif;
+
+    font-size:
+        21px;
+
+    margin:
+        10px 0;
+
+}
+
+
+.dungeon-card p {
+
+    color:
+        #929395;
+
+    font-size:
+        13px;
+
+}
+
+
+.dungeon-card strong {
+
+    margin-top:
+        18px;
+
+    color:
+        #d5c3a5;
+
+    font-size:
+        12px;
+
+}
+
+
+.dungeon-card.locked {
+
+    opacity:
+        .65;
+
+}
+
+
+/* =========================================================
+   MEDIA
+========================================================= */
+
+.media-section {
+    padding: 100px 8%;
+    background:
+        linear-gradient(
+            rgba(10, 10, 14, 0.94),
+            rgba(10, 10, 14, 0.98)
+        );
+}
+
+.trailer-container {
+    max-width: 1100px;
+    margin: 50px auto 70px;
+    background: rgba(255, 255, 255, 0.035);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.45);
+}
+
+.trailer-header {
+    padding: 35px 40px 25px;
+}
+
+.eyebrow {
+    display: inline-block;
+    margin-bottom: 10px;
+    font-size: 0.75rem;
+    letter-spacing: 3px;
+    color: #c9a45c;
+    font-weight: 700;
+}
+
+.trailer-header h3 {
+    margin: 0 0 12px;
+    font-family: "Cinzel", serif;
+    font-size: 2rem;
+    color: #fff;
+}
+
+.trailer-header p {
+    max-width: 700px;
+    margin: 0;
+    color: #aaa;
+    line-height: 1.7;
+}
+
+/* Lecteur */
+
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    background: #000;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+}
+
+.video-wrapper video {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    background: #000;
+}
+
+.video-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    background:
+        radial-gradient(
+            circle,
+            rgba(0, 0, 0, 0.05),
+            rgba(0, 0, 0, 0.45)
+        );
+    transition: opacity 0.3s ease;
+}
+
+.video-overlay span {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    border: 2px solid rgba(255,255,255,0.8);
+    border-radius: 50%;
+    color: white;
+    font-size: 1.5rem;
+    padding-left: 4px;
+}
+
+.video-overlay strong {
+    color: white;
+    font-family: "Cinzel", serif;
+    font-size: 1.8rem;
+    letter-spacing: 5px;
+}
+
+.video-overlay small {
+    margin-top: 5px;
+    color: #ccc;
+    letter-spacing: 3px;
+}
+
+.video-wrapper.playing .video-overlay {
+    opacity: 0;
+}
+
+.trailer-footer {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding: 18px 30px;
+    color: #888;
+    font-size: 0.85rem;
+}
+
+/* Galerie */
+
+.media-grid {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.media-card {
+    position: relative;
+    min-height: 250px;
+    overflow: hidden;
+    border-radius: 14px;
+    background: #111;
+    border: 1px solid rgba(255,255,255,0.08);
+}
+
+.media-card img {
+    width: 100%;
+    height: 250px;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.media-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        transparent 25%,
+        rgba(0,0,0,0.9)
+    );
+}
+
+.media-card div {
+    position: absolute;
+    z-index: 2;
+    bottom: 20px;
+    left: 20px;
+}
+
+.media-card span {
+    color: #c9a45c;
+    font-size: 0.72rem;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.media-card h3 {
+    margin: 7px 0 0;
+    color: white;
+    font-family: "Cinzel", serif;
+}
+
+.media-card:hover img {
+    transform: scale(1.07);
+}
+
+/* Mobile */
+
+@media (max-width: 800px) {
+
+    .media-section {
+        padding: 70px 5%;
+    }
+
+    .trailer-header {
+        padding: 25px;
+    }
+
+    .trailer-header h3 {
+        font-size: 1.5rem;
+    }
+
+    .media-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .video-overlay strong {
+        font-size: 1.3rem;
+    }
+
+    .video-overlay span {
+        width: 55px;
+        height: 55px;
+    }
+}
+
+.media-section {
+
+    background:
+        #0d0f12;
+
+}
+
+
+.gallery {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap:
+        18px;
+
+}
+
+
+.gallery figure {
+
+    margin:
+        0;
+
+    overflow:
+        hidden;
+
+    background:
+        #101216;
+
+    border:
+        1px solid var(--border);
+
+}
+
+
+.gallery img {
+
+    width:
+        100%;
+
+    height:
+        300px;
+
+    object-fit:
+        cover;
+
+    transition:
+        .4s;
+
+}
+
+
+.gallery figure:hover img {
+
+    transform:
+        scale(1.05);
+
+}
+
+
+.gallery figcaption {
+
+    padding:
+        14px 17px;
+
+    font-family:
+        "Cinzel",
+        serif;
+
+    font-size:
+        11px;
+
+    letter-spacing:
+        .15em;
+
+}
+
+
+/* =========================================================
+   COMMUNITY
+========================================================= */
+
+.community-section {
+
+    padding:
+        130px 8vw;
+
+    text-align:
+        center;
+
+    background:
+
+        radial-gradient(
+            circle at center,
+            rgba(133,91,38,.20),
+            transparent 45%
+        ),
+
+        #0b0c0e;
+
+}
+
+
+.community-content {
+
+    max-width:
+        800px;
+
+    margin:
+        auto;
+
+}
+
+
+.community-content h2 {
+
+    font-family:
+        "Cinzel",
+        serif;
+
+    font-size:
+        clamp(36px, 6vw, 65px);
+
+    line-height:
+        1.05;
+
+    margin-bottom:
+        22px;
+
+}
+
+
+.community-content > p:not(.eyebrow) {
+
+    color:
+        #aaa;
+
+    margin-bottom:
+        30px;
+
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+
+    padding:
+        45px 8vw;
+
+    background:
+        #060708;
+
+    border-top:
+        1px solid #1c1e21;
+
+}
+
+
+.footer-main {
+
+    display:
+        flex;
+
+    justify-content:
+        space-between;
+
+    gap:
+        30px;
+
+}
+
+
+.footer-logo {
+
+    font-family:
+        "Cinzel",
+        serif;
+
+    font-size:
+        25px;
+
+    font-weight:
+        800;
+
+}
+
+
+.footer-main p {
+
+    color:
+        #777;
+
+    font-size:
+        13px;
+
+}
+
+
+.footer-links {
+
+    display:
+        flex;
+
+    gap:
+        22px;
+
+    flex-wrap:
+        wrap;
+
+}
+
+
+.footer-links a {
+
+    color:
+        #888;
+
+    font-size:
+        12px;
+
+}
+
+
+.footer-links a:hover {
+
+    color:
+        var(--gold-light);
+
+}
+
+
+.footer-bottom {
+
+    margin-top:
+        30px;
+
+    padding-top:
+        20px;
+
+    border-top:
+        1px solid #17191b;
+
+    color:
+        #666;
+
+    font-size:
+        11px;
+
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1050px) {
+
+    .navigation {
+
+        gap:
+            15px;
+
+    }
+
+
+    .feature-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+
+    .dungeon-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+
+    .download-grid {
+
+        grid-template-columns:
+            1fr 1fr;
+
+    }
+
+
+    .download-card.featured {
+
+        grid-column:
+            1 / -1;
+
+    }
+
+
+    .installation-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+}
+
+
+@media (max-width: 800px) {
+
+    .navigation {
+
+        display:
+            none;
+
+    }
+
+
+    .hero-content {
+
+        margin:
+            0 7vw;
+
+    }
+
+
+    .hero-background {
+
+        background-position:
+            65% center;
+
+    }
+
+
+    .lore-section {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .news-grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .gallery {
+
+        grid-template-columns:
+            1fr 1fr;
+
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .navbar {
+
+        padding:
+            0 6vw;
+
+    }
+
+
+    .nav-button {
+
+        display:
+            none;
+
+    }
+
+
+    .section {
+
+        padding:
+            85px 7vw;
+
+    }
+
+
+    .hero h1 {
+
+        font-size:
+            58px;
+
+    }
+
+
+    .hero h2 {
+
+        font-size:
+            20px;
+
+    }
+
+
+    .hero-description {
+
+        font-size:
+            14px;
+
+    }
+
+
+    .hero-buttons {
+
+        flex-direction:
+            column;
+
+    }
+
+
+    .button {
+
+        width:
+            100%;
+
+    }
+
+
+    .feature-grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .dungeon-grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .download-grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .download-card.featured {
+
+        grid-column:
+            auto;
+
+    }
+
+
+    .installation-grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .gallery {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .gallery img {
+
+        height:
+            240px;
+
+    }
+
+
+    .lore-banner {
+
+        padding:
+            90px 7vw;
+
+    }
+
+
+    .footer-main {
+
+        flex-direction:
+            column;
+
+    }
+
+    .discord-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    padding: 14px 24px;
+
+    background: #5865F2;
+    color: white;
+
+    text-decoration: none;
+    font-weight: 700;
+
+    border-radius: 8px;
+
+    transition: transform 0.25s ease,
+                box-shadow 0.25s ease,
+                background 0.25s ease;
+}
+
+.discord-button:hover {
+    background: #4752C4;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(88, 101, 242, 0.35);
+}
+
+}
