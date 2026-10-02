@@ -1,0 +1,3634 @@
+/* =========================================================
+   MAXPELA — SITE OFFICIEL
+   DARK FANTASY / ADVENTURE
+========================================================= */
+
+
+/* =========================================================
+   VARIABLES
+========================================================= */
+
+:root {
+
+    --background: #08090b;
+    --background-light: #101216;
+    --background-card: #14161a;
+
+    --gold: #c99b51;
+    --gold-light: #dfbb7b;
+
+    --text: #eee8dc;
+    --text-soft: #aaa8a2;
+    --text-dark: #777;
+
+    --border: #25282d;
+
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+
+body {
+
+    background: var(--background);
+
+    color: var(--text);
+
+    font-family:
+        "Inter",
+        Arial,
+        sans-serif;
+
+    line-height: 1.7;
+
+}
+
+
+img {
+
+    max-width: 100%;
+
+    display: block;
+
+}
+
+
+a {
+
+    color: inherit;
+
+    text-decoration: none;
+
+}
+
+
+button,
+a {
+
+    -webkit-tap-highlight-color: transparent;
+
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.navbar {
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    height: 76px;
+
+    z-index: 100;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 5vw;
+
+    background:
+        rgba(6, 7, 9, .82);
+
+    backdrop-filter:
+        blur(15px);
+
+    border-bottom:
+        1px solid rgba(255,255,255,.06);
+
+}
+
+
+.logo {
+
+    font-family: "Cinzel", serif;
+
+    font-weight: 800;
+
+    letter-spacing: .13em;
+
+    font-size: 20px;
+
+}
+
+
+.logo span {
+
+    color: var(--gold);
+
+    margin-right: 7px;
+
+}
+
+
+.navigation {
+
+    display: flex;
+
+    gap: 28px;
+
+}
+
+
+.navigation a {
+
+    color: #aaa;
+
+    font-size: 13px;
+
+    transition: .2s;
+
+}
+
+
+.navigation a:hover {
+
+    color: var(--gold-light);
+
+}
+
+
+.nav-button {
+
+    border:
+        1px solid var(--gold);
+
+    padding:
+        9px 17px;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: .12em;
+
+    color:
+        var(--gold-light);
+
+}
+
+
+/* =========================================================
+   GENERAL
+========================================================= */
+
+.section {
+
+    padding:
+        120px 9vw;
+
+}
+
+
+.eyebrow {
+
+    color:
+        var(--gold);
+
+    font-size:
+        11px;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        .24em;
+
+    margin-bottom:
+        14px;
+
+}
+
+
+.section-title {
+
+    max-width:
+        750px;
+
+    margin:
+        0 auto 60px;
+
+    text-align:
+        center;
+
+}
+
+
+.section-title.left {
+
+    margin-left:
+        0;
+
+    text-align:
+        left;
+
+}
+
+
+.section-title h2 {
+
+    font-family:
+        "Cinzel",
+        serif;
+
+    font-size:
+        clamp(36px, 5vw, 62px);
+
+    line-height:
+        1.1;
+
+    margin-bottom:
+        18px;
+
+}
+
+
+.section-title h2 span {
+
+    color:
+        var(--gold);
+
+}
+
+
+.section-title > p:last-child {
+
+    color:
+        var(--text-soft);
+
+}
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.button {
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    min-height:
+        50px;
+
+    padding:
+        0 23px;
+
+    border:
+        1px solid var(--gold);
+
+    font-size:
+        11px;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        .1em;
+
+    transition:
+        .25s;
+
+}
+
+
+.button-primary {
+
+    background:
+        var(--gold);
+
+    color:
+        #120e08;
+
+}
+
+
+.button-primary:hover {
+
+    background:
+        var(--gold-light);
+
+    transform:
+        translateY(-2px);
+
+}
+
+
+.button-secondary {
+
+    background:
+        transparent;
+
+    color:
+        var(--text);
+
+}
+
+
+.button-secondary:hover {
+
+    background:
+        rgba(255,255,255,.06);
+
+}
+
+
+.disabled {
+
+    opacity:
+        .5;
+
+    cursor:
+        not-allowed;
+
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+
+    min-height:
+        100vh;
+
+    position:
+        relative;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    overflow:
+        hidden;
+
+}
+
+
+.hero-background {
+
+    position:
+        absolute;
+
+    inset:
+        0;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            rgba(4,5,7,.98) 0%,
+            rgba(4,5,7,.82) 40%,
+            rgba(4,5,7,.42) 100%
+        ),
+
+        url("assets/astralys.png")
+        center / cover;
+
+    transform:
+        scale(1.03);
+
+}
+
+
+.hero-overlay {
+
+    position:
+        absolute;
+
+    inset:
+        0;
+
+    background:
+
+        linear-gradient(
+            0deg,
+            var(--background) 0%,
+            transparent 25%
+        );
+
+}
+
+
+.hero-content {
+
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    max-width:
+        720px;
+
+    margin-left:
+        10vw;
+
+    padding-top:
+        80px;
+
+}
+
+
+.hero h1 {
+
+    font-family:
+        "Cinzel",
+        serif;
+
+    font-size:
+        clamp(65px, 11vw, 145px);
+
+    line-height:
+        .9;
+
+    letter-spacing:
+        .06em;
+
+    font-weight:
+        800;
+
+    text-shadow:
+        0 15px 50px #000;
+
+}
+
+
+.hero h1 span {
+
+    color:
+        var(--gold);
+
+}
+
+
+.hero h2 {
+
+    margin-top:
+        28px;
+
+    font-family:
+        "Cinzel",
+        serif;
+
+    font-size:
+        clamp(21px, 3vw, 32px);
+
+    line-height:
+        1.35;
+
+    color:
+        #e4d8c2;
+
+}
+
+
+.hero-description {
+
+    max-width:
+        600px;
+
+    margin-top:
+        18px;
+
+    color:
+        #aaa9a4;
+
+}
+
+
+.hero-buttons {
+
+    display:
+        flex;
+
+    gap:
+        12px;
+
+    flex-wrap:
+        wrap;
+
+    margin-top:
+        30px;
+
+}
+
+
+.project-status {
+
+    margin-top:
+        25px;
+
+    color:
+        #858582;
+
+    font-size:
+        12px;
+
+}
+
+
+.status-dot {
+
+    display:
+        inline-block;
+
+    width:
+        8px;
+
+    height:
+        8px;
+
+    border-radius:
+        50%;
+
+    margin-right:
+        8px;
+
+    background:
+        #7fa45a;
+
+    box-shadow:
+        0 0 12px #7fa45a;
+
+}
+
+
+.scroll-indicator {
+
+    position:
+        absolute;
+
+    z-index:
+        3;
+
+    bottom:
+        25px;
+
+    left:
+        50%;
+
+    transform:
+        translateX(-50%);
+
+    font-size:
+        10px;
+
+    letter-spacing:
+        .2em;
+
+    color:
+        #777;
+
+}
+
+
+/* =========================================================
+   FEATURES
+========================================================= */
+
+.feature-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap:
+        18px;
+
+}
+
+
+.feature-card {
+
+    padding:
+        30px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #121418,
+            #0c0d10
+        );
+
+    border:
+        1px solid var(--border);
+
+    transition:
+        .25s;
+
+}
+
+
+.feature-card:hover {
+
+    border-color:
+        #765a32;
+
+    transform:
+        translateY(-4px);
+
+}
+
+
+.feature-icon {
+
+    font-size:
+        32px;
+
+    margin-bottom:
+        15px;
+
+}
+
+
+.feature-card h3 {
+
+    font-family:
+        "Cinzel",
+        serif;
+
+    font-size:
+        21px;
+
+    margin-bottom:
+        12px;
+
+}
+
+
+.feature-card p {
+
+    color:
+        #96979a;
+
+    font-size:
+        14px;
+
+}
+
+
+/* =========================================================
+   LORE BANNER
+========================================================= */
+
+.lore-banner {
+
+    min-height:
+        500px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    padding:
+        90px 12vw;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            rgba(6,7,8,.96),
+            rgba(6,7,8,.45)
+        ),
+
+        url("assets/world.png")
+        center / cover;
+
+    border-top:
+        1px solid #1e2023;
+
+    border-bottom:
+        1px solid #1e2023;
+
+}
+
+
+.lore-banner-content {
+
+    max-width:
+        700px;
+
+}
+
+
+.lore-banner h2 {
+
+    font-family:
+        "Cinzel",
+        serif;
+
+    font-size:
+        clamp(35px, 5vw, 62px);
+
+    line-height:
+        1.1;
+
+    margin-bottom:
+        22px;
+
+}
+
+
+.lore-banner p:not(.eyebrow) {
+
+    color:
+        #aaa;
+
+}
+
+
+.text-link {
+
+    display:
+        inline-block;
+
+    margin-top:
+        22px;
+
+    color:
+        var(--gold-light);
+
+    font-weight:
+        700;
+
+}
+
+
+/* =========================================================
+   LORE
+========================================================= */
+
+.lore-section {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        1.3fr .7fr;
+
+    gap:
+        80px;
+
+    align-items:
+        center;
+
+}
+
+
+.lore-text h2 {
+
+    font-family:
+        "Cinzel",
+        serif;
+
+    font-size:
+        clamp(35px, 5vw, 60px);
+
+    line-height:
+        1.1;
+
+    margin-bottom:
+        25px;
+
+}
+
+
+.lore-text p {
+
+    color:
+        #a2a2a0;
+
+    margin-bottom:
+        18px;
+
+}
+
+
+.lore-text blockquote {
+
+    border-left:
+        2px solid var(--gold);
+
+    padding-left:
+        18px;
+
+    color:
+        #ded3c0;
+
+    font-style:
+        italic;
+
+}
+
+
+.lore-card {
+
+    min-height:
+        340px;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    text-align:
+        center;
+
+    border:
+        1px solid #3b3020;
+
+    background:
+        radial-gradient(
+            circle,
+            #251e13,
+            #0d0e10 68%
+        );
+
+}
+
+
+.lore-symbol {
+
+    color:
+        var(--gold);
+
+    font-size:
+        55px;
+
+}
+
+
+.lore-card p {
+
+    color:
+        var(--gold);
+
+    letter-spacing:
+        .2em;
+
+    font-size:
+        10px;
+
+}
+
+
+.lore-card strong {
+
+    font-family:
+        "Cinzel",
+        serif;
+
+    font-size:
+        90px;
+
+}
+
+
+.lore-card span {
+
+    color:
+        #999;
+
+}
+
+
+/* =========================================================
+   DOWNLOAD
+========================================================= */
+
+.download-section {
+
+    background:
+        #0d0f12;
+
+}
+
+
+.download-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        1.5fr 1fr 1fr;
+
+    gap:
+        18px;
+
+}
+
+
+.download-card {
+
+    padding:
+        32px;
+
+    background:
+        #14161a;
+
+    border:
+        1px solid var(--border);
+
+}
+
+
+.download-card.featured {
+
+    border-color:
+        #71552e;
+
+}
+
+
+.download-tag {
+
+    color:
+        var(--gold);
+
+    font-size:
+        10px;
+
+    letter-spacing:
+        .18em;
+
+}
+
+
+.download-card h3 {
+
+    font-family:
+        "Cinzel",
+        serif;
+
+    font-size:
+        23px;
+
+    margin:
+        12px 0;
+
+}
+
+
+.download-card p {
+
+    color:
+        #999;
+
+    margin-bottom:
+        22px;
+
+}
+
+
+.download-card small {
+
+    display:
+        block;
+
+    color:
+        #707174;
+
+    margin-top:
+        14px;
+
+}
+
+
+.download-icon {
+
+    font-size:
+        32px;
+
+    margin-bottom:
+        12px;
+
+}
+
+
+/* =========================================================
+   INSTALLATION
+========================================================= */
+
+.installation {
+
+    margin-top:
+        50px;
+
+    padding:
+        35px;
+
+    border:
+        1px solid var(--border);
+
+}
+
+
+.installation h3 {
+
+    font-family:
+        "Cinzel",
+        serif;
+
+    font-size:
+        25px;
+
+    margin-bottom:
+        25px;
+
+}
+
+
+.installation-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap:
+        12px;
+
+}
+
+
+.installation-step {
+
+    padding:
+        20px;
+
+    background:
+        #111316;
+
+}
+
+
+.installation-step span {
+
+    color:
+        var(--gold);
+
+    font-family:
+        "Cinzel",
+        serif;
+
+    font-size:
+        25px;
+
+    font-weight:
+        700;
+
+}
+
+
+.installation-step p {
+
+    color:
+        #929395;
+
+    font-size:
+        13px;
+
+}
+
+
+code {
+
+    color:
+        #d6b37b;
+
+}
+
+/* =========================================================
+   MODS MAXPELA
+========================================================= */
+
+.mods-section {
+    padding: 110px 8%;
+    background:
+        linear-gradient(
+            rgba(9, 9, 13, 0.97),
+            rgba(12, 12, 17, 0.98)
+        );
+}
+
+.mods-category {
+    max-width: 1100px;
+    margin: 65px auto 0;
+}
+
+.mods-category-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    margin-bottom: 30px;
+    padding: 22px 25px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.025);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.mods-category-header.required {
+    border-left: 3px solid #b84b4b;
+}
+
+.mods-category-header.recommended {
+    border-left: 3px solid #5d9b68;
+}
+
+.mods-category-icon {
+    font-size: 1.7rem;
+    line-height: 1;
+}
+
+.mods-category-header h3 {
+    margin: 0 0 6px;
+    color: #fff;
+    font-family: "Cinzel", serif;
+    font-size: 1.5rem;
+}
+
+.mods-category-header p {
+    margin: 0;
+    color: #999;
+    line-height: 1.6;
+}
+
+.mods-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.mod-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    padding: 25px;
+    background: rgba(255, 255, 255, 0.035);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 14px;
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        background 0.25s ease;
+}
+
+.mod-card:hover {
+    transform: translateY(-4px);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.required-card:hover {
+    border-color: rgba(184, 75, 75, 0.55);
+}
+
+.recommended-card:hover {
+    border-color: rgba(93, 155, 104, 0.55);
+}
+
+.mod-icon {
+    flex-shrink: 0;
+    width: 52px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.06);
+    font-size: 1.5rem;
+}
+
+.mod-content {
+    min-width: 0;
+}
+
+.mod-content h4 {
+    margin: 0 0 8px;
+    color: #fff;
+    font-family: "Cinzel", serif;
+    font-size: 1.05rem;
+}
+
+.mod-content p {
+    margin: 0 0 15px;
+    color: #999;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.mod-version {
+    display: inline-block;
+    color: #c9a45c;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+}
+
+.mods-dev-tools {
+    max-width: 1100px;
+    margin: 55px auto 0;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 25px 30px;
+    background: rgba(255, 255, 255, 0.025);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 14px;
+}
+
+.mods-dev-icon {
+    font-size: 1.7rem;
+}
+
+.mods-dev-tools h3 {
+    margin: 5px 0 8px;
+    color: #fff;
+    font-family: "Cinzel", serif;
+}
+
+.mods-dev-tools p {
+    margin: 0 0 14px;
+    color: #999;
+    line-height: 1.6;
+}
+
+.dev-label {
+    color: #777;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.mods-installation {
+    max-width: 1100px;
+    margin: 35px auto 0;
+    display: flex;
+    gap: 20px;
+    padding: 30px;
+    background: rgba(201, 164, 92, 0.055);
+    border: 1px solid rgba(201, 164, 92, 0.18);
+    border-left: 3px solid #c9a45c;
+    border-radius: 12px;
+}
+
+.installation-icon {
+    font-size: 1.8rem;
+}
+
+.mods-installation h3 {
+    margin: 0 0 12px;
+    color: #fff;
+    font-family: "Cinzel", serif;
+}
+
+.mods-installation p {
+    margin: 0 0 10px;
+    color: #aaa;
+    line-height: 1.6;
+}
+
+.mods-installation strong {
+    color: #fff;
+}
+
+.mods-path {
+    display: inline-block;
+    margin: 4px 0 14px;
+    padding: 8px 12px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 6px;
+    color: #ddd;
+    font-family: monospace;
+    font-size: 0.85rem;
+}
+
+.installation-warning {
+    color: #c9a45c !important;
+    font-size: 0.85rem;
+}
+
+
+/* =========================================================
+   RESPONSIVE — MODS
+========================================================= */
+
+@media (max-width: 800px) {
+
+    .mods-section {
+        padding: 75px 5%;
+    }
+
+    .mods-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .mods-category-header {
+        padding: 20px;
+    }
+
+    .mod-card {
+        padding: 22px;
+    }
+
+    .mods-dev-tools,
+    .mods-installation {
+        padding: 22px;
+    }
+
+}
+
+@media (max-width: 500px) {
+
+    .mods-category-header {
+        gap: 12px;
+    }
+
+    .mods-category-header h3 {
+        font-size: 1.25rem;
+    }
+
+    .mod-card {
+        flex-direction: column;
+    }
+
+    .mods-dev-tools,
+    .mods-installation {
+        flex-direction: column;
+    }
+
+}
+
+
+/* =========================================================
+   NEWS
+========================================================= */
+
+.news-section {
+
+    background:
+        #070809;
+
+}
+
+
+.news-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap:
+        18px;
+
+}
+
+
+.news-card {
+
+    padding:
+        30px;
+
+    background:
+        #0e1013;
+
+    border-top:
+        2px solid #765326;
+
+}
+
+
+.news-card > span {
+
+    color:
+        var(--gold);
+
+    font-size:
+        10px;
+
+    letter-spacing:
+        .18em;
+
+}
+
+
+.news-card h3 {
+
+    font-family:
+        "Cinzel",
+        serif;
+
+    font-size:
+        24px;
+
+    margin:
+        12px 0;
+
+}
+
+
+.news-card p {
+
+    color:
+        #919296;
+
+    font-size:
+        14px;
+
+    margin-bottom:
+        20px;
+
+}
+
+
+.news-card a {
+
+    color:
+        var(--gold-light);
+
+    font-size:
+        13px;
+
+    font-weight:
+        700;
+
+}
+
+
+/* =========================================================
+   DUNGEONS
+========================================================= */
+
+.dungeon-section {
+
+    background:
+        #0b0c0e;
+
+}
+
+
+.dungeon-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap:
+        18px;
+
+}
+
+
+.dungeon-card {
+
+    min-height:
+        270px;
+
+    padding:
+        28px;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    justify-content:
+        flex-end;
+
+    background:
+        linear-gradient(
+            145deg,
+            #17181b,
+            #0c0d0f
+        );
+
+    border:
+        1px solid var(--border);
+
+}
+
+
+.dungeon-card > span {
+
+    color:
+        var(--gold);
+
+    font-size:
+        10px;
+
+    letter-spacing:
+        .18em;
+
+}
+
+
+.dungeon-card h3 {
+
+    font-family:
+        "Cinzel",
+        serif;
+
+    font-size:
+        21px;
+
+    margin:
+        10px 0;
+
+}
+
+
+.dungeon-card p {
+
+    color:
+        #929395;
+
+    font-size:
+        13px;
+
+}
+
+
+.dungeon-card strong {
+
+    margin-top:
+        18px;
+
+    color:
+        #d5c3a5;
+
+    font-size:
+        12px;
+
+}
+
+
+.dungeon-card.locked {
+
+    opacity:
+        .65;
+
+}
+
+
+/* =========================================================
+   MEDIA
+========================================================= */
+
+.media-section {
+    padding: 100px 8%;
+    background:
+        linear-gradient(
+            rgba(10, 10, 14, 0.94),
+            rgba(10, 10, 14, 0.98)
+        );
+}
+
+.trailer-container {
+    max-width: 1100px;
+    margin: 50px auto 70px;
+    background: rgba(255, 255, 255, 0.035);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.45);
+}
+
+.trailer-header {
+    padding: 35px 40px 25px;
+}
+
+.eyebrow {
+    display: inline-block;
+    margin-bottom: 10px;
+    font-size: 0.75rem;
+    letter-spacing: 3px;
+    color: #c9a45c;
+    font-weight: 700;
+}
+
+.trailer-header h3 {
+    margin: 0 0 12px;
+    font-family: "Cinzel", serif;
+    font-size: 2rem;
+    color: #fff;
+}
+
+.trailer-header p {
+    max-width: 700px;
+    margin: 0;
+    color: #aaa;
+    line-height: 1.7;
+}
+
+/* Lecteur */
+
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    background: #000;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+}
+
+.video-wrapper video {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    background: #000;
+}
+
+.video-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    background:
+        radial-gradient(
+            circle,
+            rgba(0, 0, 0, 0.05),
+            rgba(0, 0, 0, 0.45)
+        );
+    transition: opacity 0.3s ease;
+}
+
+.video-overlay span {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    border: 2px solid rgba(255,255,255,0.8);
+    border-radius: 50%;
+    color: white;
+    font-size: 1.5rem;
+    padding-left: 4px;
+}
+
+.video-overlay strong {
+    color: white;
+    font-family: "Cinzel", serif;
+    font-size: 1.8rem;
+    letter-spacing: 5px;
+}
+
+.video-overlay small {
+    margin-top: 5px;
+    color: #ccc;
+    letter-spacing: 3px;
+}
+
+.video-wrapper.playing .video-overlay {
+    opacity: 0;
+}
+
+.trailer-footer {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding: 18px 30px;
+    color: #888;
+    font-size: 0.85rem;
+}
+
+/* Galerie */
+
+.media-grid {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.media-card {
+    position: relative;
+    min-height: 250px;
+    overflow: hidden;
+    border-radius: 14px;
+    background: #111;
+    border: 1px solid rgba(255,255,255,0.08);
+}
+
+.media-card img {
+    width: 100%;
+    height: 250px;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.media-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        transparent 25%,
+        rgba(0,0,0,0.9)
+    );
+}
+
+.media-card div {
+    position: absolute;
+    z-index: 2;
+    bottom: 20px;
+    left: 20px;
+}
+
+.media-card span {
+    color: #c9a45c;
+    font-size: 0.72rem;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.media-card h3 {
+    margin: 7px 0 0;
+    color: white;
+    font-family: "Cinzel", serif;
+}
+
+.media-card:hover img {
+    transform: scale(1.07);
+}
+
+/* Mobile */
+
+@media (max-width: 800px) {
+
+    .media-section {
+        padding: 70px 5%;
+    }
+
+    .trailer-header {
+        padding: 25px;
+    }
+
+    .trailer-header h3 {
+        font-size: 1.5rem;
+    }
+
+    .media-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .video-overlay strong {
+        font-size: 1.3rem;
+    }
+
+    .video-overlay span {
+        width: 55px;
+        height: 55px;
+    }
+}
+
+.media-section {
+
+    background:
+        #0d0f12;
+
+}
+
+
+.gallery {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap:
+        18px;
+
+}
+
+
+.gallery figure {
+
+    margin:
+        0;
+
+    overflow:
+        hidden;
+
+    background:
+        #101216;
+
+    border:
+        1px solid var(--border);
+
+}
+
+
+.gallery img {
+
+    width:
+        100%;
+
+    height:
+        300px;
+
+    object-fit:
+        cover;
+
+    transition:
+        .4s;
+
+}
+
+
+.gallery figure:hover img {
+
+    transform:
+        scale(1.05);
+
+}
+
+
+.gallery figcaption {
+
+    padding:
+        14px 17px;
+
+    font-family:
+        "Cinzel",
+        serif;
+
+    font-size:
+        11px;
+
+    letter-spacing:
+        .15em;
+
+}
+
+
+/* =========================================================
+   COMMUNITY
+========================================================= */
+
+.community-section {
+
+    padding:
+        130px 8vw;
+
+    text-align:
+        center;
+
+    background:
+
+        radial-gradient(
+            circle at center,
+            rgba(133,91,38,.20),
+            transparent 45%
+        ),
+
+        #0b0c0e;
+
+}
+
+
+.community-content {
+
+    max-width:
+        800px;
+
+    margin:
+        auto;
+
+}
+
+
+.community-content h2 {
+
+    font-family:
+        "Cinzel",
+        serif;
+
+    font-size:
+        clamp(36px, 6vw, 65px);
+
+    line-height:
+        1.05;
+
+    margin-bottom:
+        22px;
+
+}
+
+
+.community-content > p:not(.eyebrow) {
+
+    color:
+        #aaa;
+
+    margin-bottom:
+        30px;
+
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+
+    padding:
+        45px 8vw;
+
+    background:
+        #060708;
+
+    border-top:
+        1px solid #1c1e21;
+
+}
+
+
+.footer-main {
+
+    display:
+        flex;
+
+    justify-content:
+        space-between;
+
+    gap:
+        30px;
+
+}
+
+
+.footer-logo {
+
+    font-family:
+        "Cinzel",
+        serif;
+
+    font-size:
+        25px;
+
+    font-weight:
+        800;
+
+}
+
+
+.footer-main p {
+
+    color:
+        #777;
+
+    font-size:
+        13px;
+
+}
+
+
+.footer-links {
+
+    display:
+        flex;
+
+    gap:
+        22px;
+
+    flex-wrap:
+        wrap;
+
+}
+
+
+.footer-links a {
+
+    color:
+        #888;
+
+    font-size:
+        12px;
+
+}
+
+
+.footer-links a:hover {
+
+    color:
+        var(--gold-light);
+
+}
+
+
+.footer-bottom {
+
+    margin-top:
+        30px;
+
+    padding-top:
+        20px;
+
+    border-top:
+        1px solid #17191b;
+
+    color:
+        #666;
+
+    font-size:
+        11px;
+
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1050px) {
+
+    .navigation {
+
+        gap:
+            15px;
+
+    }
+
+
+    .feature-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+
+    .dungeon-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+
+    .download-grid {
+
+        grid-template-columns:
+            1fr 1fr;
+
+    }
+
+
+    .download-card.featured {
+
+        grid-column:
+            1 / -1;
+
+    }
+
+
+    .installation-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+}
+
+
+@media (max-width: 800px) {
+
+    .navigation {
+
+        display:
+            none;
+
+    }
+
+
+    .hero-content {
+
+        margin:
+            0 7vw;
+
+    }
+
+
+    .hero-background {
+
+        background-position:
+            65% center;
+
+    }
+
+
+    .lore-section {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .news-grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .gallery {
+
+        grid-template-columns:
+            1fr 1fr;
+
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .navbar {
+
+        padding:
+            0 6vw;
+
+    }
+
+
+    .nav-button {
+
+        display:
+            none;
+
+    }
+
+
+    .section {
+
+        padding:
+            85px 7vw;
+
+    }
+
+
+    .hero h1 {
+
+        font-size:
+            58px;
+
+    }
+
+
+    .hero h2 {
+
+        font-size:
+            20px;
+
+    }
+
+
+    .hero-description {
+
+        font-size:
+            14px;
+
+    }
+
+
+    .hero-buttons {
+
+        flex-direction:
+            column;
+
+    }
+
+
+    .button {
+
+        width:
+            100%;
+
+    }
+
+
+    .feature-grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .dungeon-grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .download-grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .download-card.featured {
+
+        grid-column:
+            auto;
+
+    }
+
+
+    .installation-grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .gallery {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .gallery img {
+
+        height:
+            240px;
+
+    }
+
+
+    .lore-banner {
+
+        padding:
+            90px 7vw;
+
+    }
+
+
+    .footer-main {
+
+        flex-direction:
+            column;
+
+    }
+
+    .discord-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    padding: 14px 24px;
+
+    background: #5865F2;
+    color: white;
+
+    text-decoration: none;
+    font-weight: 700;
+
+    border-radius: 8px;
+
+    transition: transform 0.25s ease,
+                box-shadow 0.25s ease,
+                background 0.25s ease;
+}
+
+.discord-button:hover {
+    background: #4752C4;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(88, 101, 242, 0.35);
+}
+
+/* =========================================================
+   SHADERS
+========================================================= */
+
+.shaders-page {
+    padding-top: 150px;
+    min-height: 100vh;
+}
+
+
+/* =========================================================
+   SHADER FEATURED
+========================================================= */
+
+.shader-featured {
+
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    display: flex;
+
+    gap: 35px;
+
+    padding: 40px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(201, 155, 81, 0.08),
+            rgba(255, 255, 255, 0.025)
+        );
+
+    border:
+        1px solid rgba(201, 155, 81, 0.25);
+
+    border-radius: 16px;
+
+}
+
+
+.shader-icon {
+
+    width: 75px;
+    height: 75px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background:
+        rgba(201, 155, 81, 0.10);
+
+    border:
+        1px solid rgba(201, 155, 81, 0.25);
+
+    border-radius: 12px;
+
+    font-size: 2rem;
+
+}
+
+
+.shader-content {
+
+    flex: 1;
+
+}
+
+
+.shader-tag {
+
+    display: inline-block;
+
+    margin-bottom: 12px;
+
+    color:
+        var(--gold);
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: .16em;
+
+}
+
+
+.shader-content h2 {
+
+    margin-bottom: 15px;
+
+    font-family:
+        "Cinzel",
+        serif;
+
+    font-size: 34px;
+
+}
+
+
+.shader-description {
+
+    max-width: 750px;
+
+    margin-bottom: 30px;
+
+    color:
+        var(--text-soft);
+
+    line-height: 1.8;
+
+}
+
+
+/* =========================================================
+   INFORMATIONS
+========================================================= */
+
+.shader-info-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 12px;
+
+    margin-bottom: 25px;
+
+}
+
+
+.shader-info-grid div {
+
+    padding: 15px;
+
+    background:
+        rgba(255,255,255,.035);
+
+    border:
+        1px solid rgba(255,255,255,.07);
+
+    border-radius: 8px;
+
+}
+
+
+.shader-info-grid span {
+
+    display: block;
+
+    margin-bottom: 5px;
+
+    color:
+        var(--text-dark);
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: .15em;
+
+}
+
+
+.shader-info-grid strong {
+
+    color:
+        var(--text);
+
+    font-size: 13px;
+
+}
+
+
+/* =========================================================
+   FEATURES
+========================================================= */
+
+.shader-features {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-bottom: 30px;
+
+}
+
+
+.shader-features span {
+
+    padding: 7px 12px;
+
+    color:
+        var(--text-soft);
+
+    background:
+        rgba(255,255,255,.035);
+
+    border:
+        1px solid rgba(255,255,255,.07);
+
+    border-radius: 20px;
+
+    font-size: 12px;
+
+}
+
+
+/* =========================================================
+   ACTIONS
+========================================================= */
+
+.shader-actions {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+}
+
+
+/* =========================================================
+   INSTALLATION
+========================================================= */
+
+.shader-installation {
+
+    max-width: 1100px;
+
+    margin: 35px auto 0;
+
+    display: flex;
+
+    gap: 20px;
+
+    padding: 30px;
+
+    background:
+        rgba(255,255,255,.025);
+
+    border:
+        1px solid rgba(255,255,255,.07);
+
+    border-left:
+        3px solid var(--gold);
+
+    border-radius: 12px;
+
+}
+
+
+.shader-installation h2 {
+
+    margin-bottom: 12px;
+
+    font-family:
+        "Cinzel",
+        serif;
+
+}
+
+
+.shader-installation p {
+
+    margin-bottom: 12px;
+
+    color:
+        var(--text-soft);
+
+}
+
+
+.shader-installation ol {
+
+    margin:
+        15px 0;
+
+    padding-left: 20px;
+
+    color:
+        var(--text-soft);
+
+}
+
+
+.shader-installation li {
+
+    margin-bottom: 8px;
+
+}
+
+
+.shader-path {
+
+    display: inline-block;
+
+    margin: 5px 0 15px;
+
+    padding: 9px 13px;
+
+    background:
+        rgba(0,0,0,.3);
+
+    border-radius: 6px;
+
+    color:
+        var(--text);
+
+    font-family: monospace;
+
+}
+
+
+.shader-warning {
+
+    color:
+        var(--gold) !important;
+
+    font-size: 13px;
+
+}
+
+
+.shader-back {
+
+    max-width: 1100px;
+
+    margin: 35px auto 0;
+
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 800px) {
+
+    .shader-featured {
+
+        padding: 25px;
+
+        flex-direction: column;
+
+    }
+
+
+    .shader-info-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+
+    .shader-installation {
+
+        padding: 25px;
+
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .shaders-page {
+
+        padding-top: 120px;
+
+    }
+
+
+    .shader-featured {
+
+        padding: 20px;
+
+    }
+
+
+    .shader-content h2 {
+
+        font-size: 27px;
+
+    }
+
+
+    .shader-info-grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .shader-installation {
+
+        flex-direction: column;
+
+        padding: 20px;
+
+    }
+
+}
+
+/* =========================================================
+   PAGES ROADMAP & DEVBLOG
+========================================================= */
+
+.page-content {
+    padding-top: 150px;
+    padding-bottom: 100px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.page-header {
+    max-width: 800px;
+    margin-bottom: 60px;
+}
+
+.page-header h1 {
+    font-family: "Cinzel", serif;
+    font-size: clamp(40px, 6vw, 72px);
+    line-height: 1.05;
+    margin-bottom: 20px;
+}
+
+.page-header h1 span {
+    color: var(--gold);
+}
+
+.page-header p {
+    color: var(--text-soft);
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   ROADMAP
+========================================================= */
+
+.roadmap {
+    display: grid;
+    gap: 20px;
+}
+
+.roadmap-item {
+    display: grid;
+    grid-template-columns: 90px 1fr;
+    gap: 25px;
+
+    padding: 28px;
+
+    background: #0e1013;
+    border: 1px solid rgba(255,255,255,.06);
+
+    transition: .25s;
+}
+
+.roadmap-item:hover {
+    border-color: rgba(214,179,123,.35);
+    transform: translateY(-2px);
+}
+
+.roadmap-status {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+
+    font-family: "Cinzel", serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: .08em;
+}
+
+.roadmap-status.completed {
+    color: #7fcf91;
+}
+
+.roadmap-status.progress {
+    color: var(--gold);
+}
+
+.roadmap-status.future {
+    color: #777;
+}
+
+.roadmap-item h3 {
+    font-family: "Cinzel", serif;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.roadmap-item p {
+    color: #929395;
+    line-height: 1.7;
+}
+
+.roadmap-note {
+    margin-top: 50px;
+    padding: 25px;
+
+    border-left: 2px solid var(--gold);
+    background: #0e1013;
+
+    color: #929395;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   DEVBLOG
+========================================================= */
+
+.devblog-list {
+    display: grid;
+    gap: 30px;
+}
+
+.devblog-post {
+    padding: 40px;
+
+    background: #0e1013;
+    border-top: 2px solid #765326;
+}
+
+.devblog-post-header {
+    margin-bottom: 30px;
+}
+
+.devblog-number {
+    color: var(--gold);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .2em;
+}
+
+.devblog-post h2 {
+    font-family: "Cinzel", serif;
+    font-size: clamp(28px, 4vw, 42px);
+    margin-top: 12px;
+}
+
+.devblog-post h3 {
+    font-family: "Cinzel", serif;
+    font-size: 22px;
+    margin-top: 35px;
+    margin-bottom: 12px;
+    color: var(--gold-light);
+}
+
+.devblog-post p {
+    color: #999;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.devblog-post ul {
+    margin: 20px 0;
+    padding-left: 22px;
+    color: #999;
+}
+
+.devblog-post li {
+    margin-bottom: 10px;
+}
+
+.devblog-image {
+    width: 100%;
+    margin: 30px 0;
+
+    border: 1px solid rgba(255,255,255,.08);
+}
+
+.devblog-next {
+    margin-top: 40px;
+    padding: 25px;
+
+    background: #111316;
+    border: 1px solid rgba(255,255,255,.06);
+}
+
+.devblog-next strong {
+    display: block;
+    color: var(--gold);
+    font-size: 11px;
+    letter-spacing: .18em;
+    margin-bottom: 10px;
+}
+
+
+/* =========================================================
+   RETOUR
+========================================================= */
+
+.page-back {
+    margin-top: 50px;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .page-content {
+        padding-top: 120px;
+        padding-left: 6vw;
+        padding-right: 6vw;
+    }
+
+    .roadmap-item {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .roadmap-status {
+        justify-content: flex-start;
+    }
+
+    .devblog-post {
+        padding: 25px;
+    }
+
+}
+
+/* ================================
+   ACTIONS DE TÉLÉCHARGEMENT
+================================ */
+
+.download-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    align-items: stretch;
+    margin-top: 25px;
+}
+
+.download-actions > .button {
+    margin: 0;
+}
+
+.update-button {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 5px;
+    min-height: 58px;
+    padding: 10px 18px;
+    box-sizing: border-box;
+}
+
+.update-button span {
+    display: block;
+    font-family: "Inter", sans-serif;
+    font-size: 10px;
+    line-height: 1.4;
+    letter-spacing: .08em;
+    opacity: .65;
+    text-transform: none;
+}
+
+.update-button:hover span {
+    opacity: 1;
+}
+
+/* Sur petit écran */
+@media (max-width: 700px) {
+    .download-actions {
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    .download-actions .button {
+        width: 100%;
+    }
+
+    .update-button {
+        align-items: flex-start;
+    }
+}
+
+/* =========================================================
+   DEVBLOG PAGE
+========================================================= */
+
+.devblog-page {
+    padding-top: 76px;
+}
+
+.page-hero {
+    min-height: 430px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 100px 5vw;
+    position: relative;
+    overflow: hidden;
+    background:
+        linear-gradient(
+            rgba(5, 6, 8, .55),
+            rgba(5, 6, 8, .95)
+        ),
+        url("assets/astralys.png") center / cover;
+}
+
+.page-hero::after {
+    content: "";
+    position: absolute;
+    inset: auto 0 0;
+    height: 150px;
+    background: linear-gradient(
+        transparent,
+        #060709
+    );
+}
+
+.page-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 850px;
+}
+
+.page-eyebrow {
+    color: var(--gold);
+    font-size: 11px;
+    letter-spacing: .3em;
+    font-weight: 700;
+}
+
+.page-hero h1 {
+    font-family: "Cinzel", serif;
+    font-size: clamp(48px, 8vw, 90px);
+    margin: 18px 0;
+    letter-spacing: .08em;
+}
+
+.page-hero h1 span {
+    color: var(--gold);
+}
+
+.page-hero p {
+    color: #aaa;
+    max-width: 650px;
+    margin: auto;
+    line-height: 1.8;
+}
+
+
+/* SECTION TITLES */
+
+.section-heading {
+    margin-bottom: 45px;
+}
+
+.section-heading > span {
+    color: var(--gold);
+    font-size: 10px;
+    letter-spacing: .25em;
+    font-weight: 700;
+}
+
+.section-heading h2 {
+    font-family: "Cinzel", serif;
+    font-size: clamp(30px, 5vw, 48px);
+    margin: 12px 0;
+}
+
+.section-heading h2 strong {
+    color: var(--gold);
+}
+
+.section-heading p {
+    color: #888;
+}
+
+
+/* FEATURED DEVBLOG */
+
+.featured-devblog {
+    display: grid;
+    grid-template-columns: 1.05fr 1fr;
+    min-height: 470px;
+    background: rgba(255,255,255,.025);
+    border: 1px solid rgba(255,255,255,.08);
+    overflow: hidden;
+    position: relative;
+}
+
+.featured-devblog-image {
+    min-height: 400px;
+}
+
+.featured-devblog-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.featured-devblog-content {
+    padding: clamp(30px, 5vw, 65px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.devblog-meta {
+    display: flex;
+    gap: 10px;
+    color: var(--gold);
+    font-size: 10px;
+    letter-spacing: .15em;
+    font-weight: 700;
+}
+
+.featured-devblog h3 {
+    font-family: "Cinzel", serif;
+    font-size: clamp(30px, 4vw, 48px);
+    margin: 20px 0;
+}
+
+.featured-devblog p {
+    color: #999;
+    line-height: 1.8;
+    max-width: 550px;
+}
+
+.devblog-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 25px 0 30px;
+}
+
+.devblog-tags span {
+    border: 1px solid rgba(255,255,255,.08);
+    padding: 7px 11px;
+    font-size: 10px;
+    color: #aaa;
+}
+
+
+/* ARCHIVES */
+
+.devblog-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.devblog-card {
+    display: flex;
+    gap: 25px;
+    padding: 30px;
+    background: rgba(255,255,255,.025);
+    border: 1px solid rgba(255,255,255,.07);
+    transition: .3s ease;
+}
+
+.devblog-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(197,164,92,.4);
+    background: rgba(255,255,255,.04);
+}
+
+.devblog-card-number {
+    font-family: "Cinzel", serif;
+    font-size: 30px;
+    color: var(--gold);
+    opacity: .7;
+}
+
+.devblog-card-content {
+    flex: 1;
+}
+
+.devblog-card-version {
+    font-size: 9px;
+    letter-spacing: .15em;
+    color: #777;
+}
+
+.devblog-card h3 {
+    font-family: "Cinzel", serif;
+    margin: 8px 0;
+}
+
+.devblog-card p {
+    color: #888;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.devblog-card a {
+    display: inline-block;
+    margin-top: 15px;
+    color: var(--gold-light);
+    font-size: 12px;
+    letter-spacing: .08em;
+}
+
+
+/* ARTICLE */
+
+.devblog-article {
+    max-width: 900px;
+    margin: auto;
+}
+
+.article-header {
+    border-left: 2px solid var(--gold);
+    padding-left: 25px;
+    margin-bottom: 45px;
+}
+
+.article-header span {
+    color: var(--gold);
+    font-size: 10px;
+    letter-spacing: .2em;
+}
+
+.article-header h2 {
+    font-family: "Cinzel", serif;
+    font-size: clamp(30px, 5vw, 52px);
+    margin-top: 12px;
+}
+
+.article-header strong {
+    color: var(--gold);
+}
+
+.article-content {
+    color: #aaa;
+    line-height: 1.9;
+}
+
+.article-content h3 {
+    color: #eee;
+    font-family: "Cinzel", serif;
+    margin-top: 40px;
+    margin-bottom: 15px;
+}
+
+.article-content p {
+    margin-bottom: 20px;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 850px) {
+
+    .featured-devblog {
+        grid-template-columns: 1fr;
+    }
+
+    .featured-devblog-image {
+        min-height: 280px;
+    }
+
+    .devblog-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .devblog-card {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .page-hero {
+        min-height: 350px;
+    }
+
+}
+
+/* =========================================================
+   ROADMAP
+========================================================= */
+
+.roadmap-page {
+    padding-top: 76px;
+}
+
+.roadmap-section {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.roadmap-intro {
+    max-width: 700px;
+    margin-bottom: 80px;
+}
+
+.roadmap-intro > span {
+    color: var(--gold);
+    font-size: 10px;
+    letter-spacing: .25em;
+    font-weight: 700;
+}
+
+.roadmap-intro h2 {
+    font-family: "Cinzel", serif;
+    font-size: clamp(32px, 5vw, 55px);
+    margin: 15px 0;
+}
+
+.roadmap-intro h2 strong {
+    color: var(--gold);
+}
+
+.roadmap-intro p {
+    color: #888;
+    line-height: 1.8;
+}
+
+
+/* TIMELINE */
+
+.roadmap-timeline {
+    position: relative;
+    padding-left: 55px;
+}
+
+.roadmap-timeline::before {
+    content: "";
+    position: absolute;
+    left: 17px;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: linear-gradient(
+        var(--gold),
+        rgba(197,164,92,.1)
+    );
+}
+
+.roadmap-item {
+    position: relative;
+    margin-bottom: 35px;
+}
+
+.roadmap-marker {
+    position: absolute;
+    left: -55px;
+    top: 25px;
+    width: 36px;
+    height: 36px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(255,255,255,.12);
+    background: #08090b;
+
+    color: #666;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.roadmap-item.completed .roadmap-marker,
+.roadmap-item.active .roadmap-marker {
+    border-color: var(--gold);
+    color: var(--gold);
+}
+
+.roadmap-card {
+    padding: 35px 40px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,.04),
+            rgba(255,255,255,.015)
+        );
+
+    border: 1px solid rgba(255,255,255,.07);
+
+    transition: .3s ease;
+}
+
+.roadmap-card:hover {
+    transform: translateX(6px);
+    border-color: rgba(197,164,92,.35);
+}
+
+.roadmap-card > span {
+    color: var(--gold);
+    font-size: 9px;
+    letter-spacing: .2em;
+}
+
+.roadmap-card h3 {
+    font-family: "Cinzel", serif;
+    font-size: 26px;
+    margin: 10px 0;
+}
+
+.roadmap-card p {
+    color: #888;
+    line-height: 1.7;
+    max-width: 650px;
+}
+
+.roadmap-status {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 7px 12px;
+
+    font-size: 9px;
+    letter-spacing: .15em;
+
+    border: 1px solid rgba(255,255,255,.1);
+    color: #777;
+}
+
+.roadmap-item.completed .roadmap-status,
+.roadmap-item.active .roadmap-status {
+    border-color: rgba(197,164,92,.4);
+    color: var(--gold);
+}
+
+@media (max-width: 600px) {
+
+    .roadmap-timeline {
+        padding-left: 45px;
+    }
+
+    .roadmap-marker {
+        left: -45px;
+        width: 30px;
+        height: 30px;
+    }
+
+    .roadmap-timeline::before {
+        left: 14px;
+    }
+
+    .roadmap-card {
+        padding: 25px;
+    }
+
+}
+
+/* ================================
+   PAGES SECONDAIRES
+================================ */
+
+.page-main {
+    padding-top: 76px;
+}
+
+.page-hero {
+    position: relative;
+    min-height: 360px;
+    display: flex;
+    align-items: flex-end;
+    padding: 100px 5vw 70px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.page-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(5, 6, 8, .25),
+            rgba(5, 6, 8, .92)
+        );
+    z-index: 0;
+}
+
+.page-hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 850px;
+}
+
+.page-hero .eyebrow {
+    display: block;
+    margin-bottom: 18px;
+    color: var(--gold-light);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .25em;
+    text-transform: uppercase;
+}
+
+.page-hero h1 {
+    margin: 0;
+    font-family: "Cinzel", serif;
+    font-size: clamp(42px, 6vw, 76px);
+    line-height: .95;
+    letter-spacing: .03em;
+    color: #f0ece4;
+}
+
+.page-hero p {
+    max-width: 700px;
+    margin: 24px 0 0;
+    color: #aaa;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.shaders-hero {
+    min-height: 390px;
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(6, 7, 9, .12),
+            rgba(6, 7, 9, .96)
+        ),
+        url("assets/astralys.png") center 42% / cover no-repeat;
+}
+
+.devblog-hero {
+    min-height: 390px;
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(6, 7, 9, .15),
+            rgba(6, 7, 9, .97)
+        ),
+        url("assets/astralys.png") center 42% / cover no-repeat;
+}
+
+.roadmap-hero {
+    min-height: 390px;
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(6, 7, 9, .15),
+            rgba(6, 7, 9, .97)
+        ),
+        url("assets/astralys.png") center 42% / cover no-repeat;
+}
+
+}
