@@ -1,0 +1,331 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Téléchargez et installez le pack des mods MaxPela pour Fabric et Minecraft 26.3.">
+    <title>Mods — MaxPela</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<header class="navbar">
+    <a href="index.html#accueil" class="logo"><span>✦</span> MAXPELA</a>
+    <nav class="navigation" aria-label="Navigation principale">
+        <a href="index.html#aventure">L'aventure</a>
+        <a href="index.html#lore">Lore</a>
+        <a href="index.html#jouer">Jouer</a>
+        <a href="devblogs.html">Devblog</a>
+        <a href="roadmap.html">Roadmap</a>
+        <a href="index.html#medias">Médias</a>
+        <a href="index.html#communaute">Communauté</a>
+        <a href="https://discord.gg/DdwspU7JdT" target="_blank" rel="noopener noreferrer" class="discord-button">
+            <svg class="discord-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M19.7 5.3a18.4 18.4 0 0 0-4.5-1.4l-.6 1.2a16.8 16.8 0 0 0-5.2 0l-.6-1.2a18.4 18.4 0 0 0-4.5 1.4C1.5 9.5.7 13.6 1.1 17.6a18.5 18.5 0 0 0 5.5 2.8l1.2-2a12 12 0 0 1-1.9-.9l.5-.4a13.2 13.2 0 0 0 11.2 0l.5.4a12 12 0 0 1-1.9.9l1.2 2a18.5 18.5 0 0 0 5.5-2.8c.5-4.7-.8-8.8-3.2-12.3ZM8.7 15.3c-1.1 0-2-1-2-2.2s.9-2.2 2-2.2 2 .9 2 2.2-.9 2.2-2 2.2Zm6.6 0c-1.1 0-2-1-2-2.2s.9-2.2 2-2.2 2 .9 2 2.2-.9 2.2-2 2.2Z"/></svg>
+            Rejoindre le Discord
+        </a>
+    </nav>
+    <a href="index.html#jouer" class="nav-button">JOUER</a>
+</header>
+
+<main class="page-main mods-redesign">
+    <section class="mods-hero-v2">
+        <div class="mods-hero-content">
+            <span class="eyebrow">PRÉPARER SON AVENTURE</span>
+            <h1>Les mods<br><em>de MaxPela.</em></h1>
+            <p>Le pack complet pour lancer MaxPela sous Fabric. Retrouvez les mods inclus, leur rôle et les étapes d'installation.</p>
+            <div class="mods-hero-actions">
+                <a class="button button-primary" href="downloads/maxpela-mods-fabric-26.3.zip" download>TÉLÉCHARGER LE PACK <span aria-hidden="true">↓</span></a>
+                <a class="button button-secondary" href="#catalogue-mods">PARCOURIR LES MODS <span aria-hidden="true">↓</span></a>
+            </div>
+            <div class="mods-hero-facts"><span><strong>22</strong> fichiers JAR</span><span><strong>Fabric</strong> · Minecraft 26.3</span><span><strong>1 ZIP</strong> prêt à extraire</span></div>
+        </div>
+    </section>
+
+    <section class="mods-redesign-content">
+        <div class="mods-download-panel">
+            <div class="mods-download-emblem" aria-hidden="true">⬇</div>
+            <div class="mods-download-copy">
+                <span class="mods-kicker">PACK COMPLET · MISE À JOUR 26.3</span>
+                <h2>Tout le nécessaire, au même endroit.</h2>
+                <p>L'archive contient les 22 fichiers JAR listés ci-dessous, dont le mod MaxPela et les bibliothèques utilisées par certains mods. Taille : environ 140,3 Mo.</p>
+            </div>
+            <a class="button button-primary" href="downloads/maxpela-mods-fabric-26.3.zip" download>TÉLÉCHARGER LE ZIP</a>
+        </div>
+
+        <section id="catalogue-mods" class="mods-catalogue" aria-labelledby="mods-catalogue-title">
+            <div class="mods-catalogue-heading">
+                <div>
+                    <span class="eyebrow">DANS LE PACK</span>
+                    <h2 id="mods-catalogue-title">Explorer le catalogue</h2>
+                    <p>Recherchez un mod ou filtrez la liste par usage. Ouvrez une fiche pour en savoir plus.</p>
+                </div>
+                <p class="mods-result-count" id="mods-result-count" aria-live="polite"><strong>22</strong> mods affichés</p>
+            </div>
+
+            <div class="mods-controls">
+                <label class="mods-search-wrap">
+                    <span aria-hidden="true">⌕</span>
+                    <input id="mods-search" type="search" placeholder="Rechercher un mod…" autocomplete="off" aria-label="Rechercher dans les mods">
+                    <kbd>/</kbd>
+                </label>
+                <div class="mods-filter-list" role="group" aria-label="Filtrer les mods par catégorie">
+                    <button type="button" class="mods-filter is-active" data-filter="all" aria-pressed="true">Tous <span>22</span></button>
+                    <button type="button" class="mods-filter" data-filter="libraries" aria-pressed="false">Bibliothèques</button>
+                    <button type="button" class="mods-filter" data-filter="graphics" aria-pressed="false">Graphismes</button>
+                    <button type="button" class="mods-filter" data-filter="maps" aria-pressed="false">Cartes</button>
+                    <button type="button" class="mods-filter" data-filter="tools" aria-pressed="false">Outils</button>
+                    <button type="button" class="mods-filter" data-filter="gameplay" aria-pressed="false">Gameplay</button>
+                    <button type="button" class="mods-filter" data-filter="audio" aria-pressed="false">Audio</button>
+                </div>
+            </div>
+
+            <div class="mods-card-grid" id="mods-card-grid">
+                <article class="mod-item" data-category="audio" data-search="ambient sounds ambience sons ambiance nature">
+                    <div class="mod-item-top"><span class="mod-item-icon">♫</span><span class="mod-category-label">Audio</span></div>
+                    <h3>AmbientSounds</h3><p>Enrichit l'ambiance sonore du monde avec des sons d'environnement.</p>
+                    <div class="mod-item-meta"><span>v6.3.6</span><span>Minecraft 26.3</span></div>
+                    <details><summary>En savoir plus</summary><p>Mod d'ambiance sonore. Fichier inclus : <code>AmbientSounds_FABRIC_v6.3.6_mc26.3.jar</code></p></details>
+                </article>
+                <article class="mod-item" data-category="libraries" data-search="architectury api bibliothèque dependance">
+                    <div class="mod-item-top"><span class="mod-item-icon">⌘</span><span class="mod-category-label">Bibliothèque</span></div>
+                    <h3>Architectury API</h3><p>Bibliothèque partagée utilisée par certains mods.</p>
+                    <div class="mod-item-meta"><span>v22.0.3</span><span>Fabric</span></div>
+                    <details><summary>En savoir plus</summary><p>Gardez cette bibliothèque avec les mods qui en ont besoin. Fichier inclus : <code>architectury-fabric-22.0.3.jar</code></p></details>
+                </article>
+                <article class="mod-item" data-category="libraries" data-search="balm bibliothèque dependance waystones">
+                    <div class="mod-item-top"><span class="mod-item-icon">⌘</span><span class="mod-category-label">Bibliothèque</span></div>
+                    <h3>Balm</h3><p>Bibliothèque requise par certains mods du pack.</p>
+                    <div class="mod-item-meta"><span>v26.3.0.3</span><span>Fabric</span></div>
+                    <details><summary>En savoir plus</summary><p>Fichier inclus : <code>balm-fabric-26.3-26.3.0.3.jar</code></p></details>
+                </article>
+                <article class="mod-item" data-category="tools" data-search="clientcommands commandes client utilitaire">
+                    <div class="mod-item-top"><span class="mod-item-icon">⌘</span><span class="mod-category-label">Outils</span></div>
+                    <h3>Client Commands</h3><p>Ajoute des commandes exécutées côté client.</p>
+                    <div class="mod-item-meta"><span>v2.16.2</span><span>Client</span></div>
+                    <details><summary>En savoir plus</summary><p>Fichier inclus : <code>clientcommands-2.16.2.jar</code></p></details>
+                </article>
+                <article class="mod-item" data-category="gameplay" data-search="maxpela aventure chapitre i mod officiel">
+                    <div class="mod-item-top"><span class="mod-item-icon">✦</span><span class="mod-category-label">Aventure</span></div>
+                    <h3>MaxPela</h3><p>Le mod officiel de l'aventure Minecraft créée par MaxPela Studio.</p>
+                    <div class="mod-item-meta"><span>v1.0.0</span><span>Minecraft 26.3</span><span>Java 25+</span></div>
+                    <details><summary>En savoir plus</summary><p>Fichier inclus : <code>maxpela-1.0.0.jar</code></p></details>
+                </article>
+                <article class="mod-item" data-category="libraries" data-search="cloth config configuration bibliothèque menu options">
+                    <div class="mod-item-top"><span class="mod-item-icon">⌘</span><span class="mod-category-label">Bibliothèque</span></div>
+                    <h3>Cloth Config</h3><p>Outils de configuration utilisés par des mods.</p>
+                    <div class="mod-item-meta"><span>v26.3.159</span><span>Fabric</span></div>
+                    <details><summary>En savoir plus</summary><p>Fichier inclus : <code>cloth-config-fabric-26.3.159.jar</code></p></details>
+                </article>
+                <article class="mod-item" data-category="gameplay" data-search="connectible chains chaînes chaines construction décoration decoration">
+                    <div class="mod-item-top"><span class="mod-item-icon">⛓</span><span class="mod-category-label">Gameplay</span></div>
+                    <h3>Connectible Chains</h3><p>Ajoute des chaînes reliées pour les constructions et les décors.</p>
+                    <div class="mod-item-meta"><span>v2.4.4</span><span>Fabric</span></div>
+                    <details><summary>En savoir plus</summary><p>Fichier inclus : <code>connectiblechains-2.4.4+26.3-fabric.jar</code></p></details>
+                </article>
+                <article class="mod-item" data-category="libraries" data-search="creativecore creative core bibliothèque dependance">
+                    <div class="mod-item-top"><span class="mod-item-icon">⌘</span><span class="mod-category-label">Bibliothèque</span></div>
+                    <h3>CreativeCore</h3><p>Bibliothèque partagée utilisée par certains mods.</p>
+                    <div class="mod-item-meta"><span>v2.14.19</span><span>Minecraft 26.3</span></div>
+                    <details><summary>En savoir plus</summary><p>Fichier inclus : <code>CreativeCore_FABRIC_v2.14.19_mc26.3.jar</code></p></details>
+                </article>
+                <article class="mod-item" data-category="graphics" data-search="distant horizons lod distance horizon chunks paysage rendu">
+                    <div class="mod-item-top"><span class="mod-item-icon">◉</span><span class="mod-category-label">Graphismes</span></div>
+                    <h3>Distant Horizons</h3><p>Étend la distance de vue avec un rendu de terrain simplifié au loin.</p>
+                    <div class="mod-item-meta"><span>v3.3.4</span><span>Fabric / NeoForge</span></div>
+                    <details><summary>En savoir plus</summary><p>Fichier inclus : <code>DistantHorizons-3.3.4-26.3-fabric-neoforge.jar</code></p></details>
+                </article>
+                <article class="mod-item" data-category="graphics" data-search="entity model features emf modèles modeles entités entites">
+                    <div class="mod-item-top"><span class="mod-item-icon">◈</span><span class="mod-category-label">Graphismes</span></div>
+                    <h3>Entity Model Features</h3><p>Prend en charge des modèles d'entités personnalisés.</p>
+                    <div class="mod-item-meta"><span>v3.3.8</span><span>Fabric</span></div>
+                    <details><summary>En savoir plus</summary><p>Fichier inclus : <code>entity_model_features-3.3.8-26.3-fabric.jar</code></p></details>
+                </article>
+                <article class="mod-item" data-category="graphics" data-search="entity texture features ETF textures entités entites">
+                    <div class="mod-item-top"><span class="mod-item-icon">◈</span><span class="mod-category-label">Graphismes</span></div>
+                    <h3>Entity Texture Features</h3><p>Prend en charge des textures d'entités personnalisées.</p>
+                    <div class="mod-item-meta"><span>v7.2.4</span><span>Fabric</span></div>
+                    <details><summary>En savoir plus</summary><p>Fichier inclus : <code>entity_texture_features-7.2.4-26.3-fabric.jar</code></p></details>
+                </article>
+                <article class="mod-item" data-category="libraries" data-search="fabric api bibliothèque officielle dependance">
+                    <div class="mod-item-top"><span class="mod-item-icon">⌘</span><span class="mod-category-label">Bibliothèque</span></div>
+                    <h3>Fabric API</h3><p>API de base utilisée par de nombreux mods Fabric.</p>
+                    <div class="mod-item-meta"><span>v0.161.0</span><span>Minecraft 26.3</span></div>
+                    <details><summary>En savoir plus</summary><p>Fichier inclus : <code>fabric-api-0.161.0+26.3.jar</code></p></details>
+                </article>
+                <article class="mod-item" data-category="graphics" data-search="iris shaders shader pack chargeur lumière lumiere">
+                    <div class="mod-item-top"><span class="mod-item-icon">✧</span><span class="mod-category-label">Graphismes</span></div>
+                    <h3>Iris</h3><p>Permet d'utiliser des packs de shaders compatibles.</p>
+                    <div class="mod-item-meta"><span>v1.11.7</span><span>Minecraft 26.3</span></div>
+                    <details><summary>En savoir plus</summary><p>Fichier inclus : <code>iris-fabric-1.11.7+mc26.3.jar</code></p></details>
+                </article>
+                <article class="mod-item" data-category="graphics" data-search="lambdynamiclights dynamic lights éclairage dynamique eclairage torche">
+                    <div class="mod-item-top"><span class="mod-item-icon">☼</span><span class="mod-category-label">Graphismes</span></div>
+                    <h3>LambDynamicLights</h3><p>Ajoute un éclairage dynamique pour certaines sources lumineuses.</p>
+                    <div class="mod-item-meta"><span>v4.13.0</span><span>Minecraft 26.3</span></div>
+                    <details><summary>En savoir plus</summary><p>Fichier inclus : <code>lambdynamiclights-4.13.0+26.3.jar</code></p></details>
+                </article>
+                <article class="mod-item" data-category="libraries" data-search="player animation library animations bibliothèque dependance">
+                    <div class="mod-item-top"><span class="mod-item-icon">⌘</span><span class="mod-category-label">Bibliothèque</span></div>
+                    <h3>Player Animation Library</h3><p>Bibliothèque d'animations de joueur utilisée par certains mods.</p>
+                    <div class="mod-item-meta"><span>v1.2.7</span><span>Minecraft 26.3</span></div>
+                    <details><summary>En savoir plus</summary><p>Fichier inclus : <code>PlayerAnimationLibMerged-1.2.7+mc.26.3.jar</code></p></details>
+                </article>
+                <article class="mod-item" data-category="gameplay" data-search="shogi jeu échecs japonais echecs japonais">
+                    <div class="mod-item-top"><span class="mod-item-icon">♟</span><span class="mod-category-label">Gameplay</span></div>
+                    <h3>Shogi</h3><p>Ajoute le jeu de shogi à l'univers de Minecraft.</p>
+                    <div class="mod-item-meta"><span>v26.3.0.3</span><span>Fabric</span></div>
+                    <details><summary>En savoir plus</summary><p>Fichier inclus : <code>shogi-fabric-26.3-26.3.0.3.jar</code></p></details>
+                </article>
+                <article class="mod-item" data-category="graphics" data-search="sodium performance rendu fps optimisation optimisation graphique">
+                    <div class="mod-item-top"><span class="mod-item-icon">◈</span><span class="mod-category-label">Graphismes</span></div>
+                    <h3>Sodium</h3><p>Optimise le rendu graphique pour améliorer les performances.</p>
+                    <div class="mod-item-meta"><span>v0.9.2</span><span>Minecraft 26.3</span></div>
+                    <details><summary>En savoir plus</summary><p>Fichier inclus : <code>sodium-fabric-0.9.2+mc26.3.jar</code></p></details>
+                </article>
+                <article class="mod-item" data-category="gameplay" data-search="waystones pierres téléportation teleportation déplacement deplacement voyage">
+                    <div class="mod-item-top"><span class="mod-item-icon">⌖</span><span class="mod-category-label">Gameplay</span></div>
+                    <h3>Waystones</h3><p>Ajoute des pierres permettant de voyager entre des points découverts.</p>
+                    <div class="mod-item-meta"><span>v26.3.0.1</span><span>Fabric</span></div>
+                    <details><summary>En savoir plus</summary><p>Fichier inclus : <code>waystones-fabric-26.3-26.3.0.1.jar</code></p></details>
+                </article>
+                <article class="mod-item" data-category="tools" data-search="worldedit construction édition edition monde outil build">
+                    <div class="mod-item-top"><span class="mod-item-icon">⚒</span><span class="mod-category-label">Outils</span></div>
+                    <h3>WorldEdit</h3><p>Outil d'édition du monde, principalement utile à la construction.</p>
+                    <div class="mod-item-meta"><span>v7.4.6 beta 02</span><span>Fabric</span></div>
+                    <details><summary>En savoir plus</summary><p>Fichier inclus : <code>worldedit-mod-7.4.6-beta-02.jar</code></p></details>
+                </article>
+                <article class="mod-item" data-category="maps" data-search="xaero minimap mini carte carte exploration">
+                    <div class="mod-item-top"><span class="mod-item-icon">⌖</span><span class="mod-category-label">Cartes</span></div>
+                    <h3>Xaero's Minimap</h3><p>Affiche une mini-carte pour se repérer pendant l'exploration.</p>
+                    <div class="mod-item-meta"><span>v26.5.3</span><span>Minecraft 26.3</span></div>
+                    <details><summary>En savoir plus</summary><p>Fichier inclus : <code>xaerominimap-fabric-26.3-26.5.3.jar</code></p></details>
+                </article>
+                <article class="mod-item" data-category="maps" data-search="xaero world map monde carte exploration">
+                    <div class="mod-item-top"><span class="mod-item-icon">⌖</span><span class="mod-category-label">Cartes</span></div>
+                    <h3>Xaero's World Map</h3><p>Affiche une carte du monde exploré.</p>
+                    <div class="mod-item-meta"><span>v1.46.4</span><span>Minecraft 26.3</span></div>
+                    <details><summary>En savoir plus</summary><p>Fichier inclus : <code>xaeroworldmap-fabric-26.3-1.46.4.jar</code></p></details>
+                </article>
+                <article class="mod-item" data-category="libraries" data-search="yet another config library yacl bibliothèque configuration menu">
+                    <div class="mod-item-top"><span class="mod-item-icon">⌘</span><span class="mod-category-label">Bibliothèque</span></div>
+                    <h3>Yet Another Config Lib</h3><p>Bibliothèque d'interface de configuration utilisée par certains mods.</p>
+                    <div class="mod-item-meta"><span>v3.9.7</span><span>Minecraft 26.3</span></div>
+                    <details><summary>En savoir plus</summary><p>Fichier inclus : <code>yet_another_config_lib_v3-3.9.7+26.3-fabric.jar</code></p></details>
+                </article>
+            </div>
+            <p class="mods-empty-state" id="mods-empty-state" hidden>Aucun mod ne correspond à cette recherche. <button type="button" id="mods-reset">Effacer les filtres</button></p>
+        </section>
+
+        <section id="installation-mods" class="mods-install-guide" aria-labelledby="mods-install-title">
+            <div class="mods-install-heading">
+                <span class="eyebrow">INSTALLATION FABRIC</span>
+                <h2 id="mods-install-title">Prêt à rejoindre MaxPela ?</h2>
+                <p>Quelques étapes pour placer les mods au bon endroit.</p>
+            </div>
+            <div class="mods-install-steps">
+                <article><span>01</span><h3>Installe Fabric</h3><p>Choisis le profil Fabric correspondant à Minecraft 26.3.</p></article>
+                <article><span>02</span><h3>Décompresse le ZIP</h3><p>Extrais les fichiers JAR de l'archive téléchargée.</p></article>
+                <article><span>03</span><h3>Ouvre le dossier mods</h3><p>Depuis le launcher, ouvre le dossier du jeu. Crée <code>mods</code> s'il n'existe pas.</p></article>
+                <article><span>04</span><h3>Lance le profil Fabric</h3><p>Place tous les JAR dans le dossier et lance le profil Fabric 26.3.</p></article>
+            </div>
+            <div class="mods-path-copy-row">
+                <div><span>DOSSIER DE DESTINATION</span><code id="mods-path">.minecraft/mods</code></div>
+                <button type="button" class="button button-secondary" id="copy-mods-path">COPIER LE CHEMIN</button>
+                <span class="mods-copy-status" id="mods-copy-status" aria-live="polite"></span>
+            </div>
+            <p class="mods-install-note"><span aria-hidden="true">✦</span> Ne décompresse pas les fichiers JAR eux-mêmes. Ils doivent rester directement dans le dossier <code>mods</code>.</p>
+        </section>
+
+        <div class="mods-bottom-cta">
+            <div><span class="mods-kicker">TA PARTIE T'ATTEND</span><h2>Le pack complet est prêt.</h2></div>
+            <a class="button button-primary" href="downloads/maxpela-mods-fabric-26.3.zip" download>TÉLÉCHARGER LES 22 MODS ↓</a>
+        </div>
+    </section>
+</main>
+
+<footer><div class="footer-links"><a href="index.html">← Retour à MaxPela</a><a href="index.html#jouer">Jouer</a><a href="https://discord.gg/DdwspU7JdT" target="_blank" rel="noopener noreferrer">Discord ↗</a></div></footer>
+
+<script>
+(() => {
+    const cards = [...document.querySelectorAll(".mod-item")];
+    const search = document.getElementById("mods-search");
+    const filters = [...document.querySelectorAll(".mods-filter")];
+    const count = document.getElementById("mods-result-count");
+    const empty = document.getElementById("mods-empty-state");
+    let activeFilter = "all";
+
+    const normalize = (value) => value.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+    const applyFilters = () => {
+        const query = normalize(search.value.trim());
+        let visible = 0;
+        cards.forEach((card) => {
+            const matchesCategory = activeFilter === "all" || card.dataset.category === activeFilter;
+            const searchable = normalize(card.innerText + " " + card.dataset.search);
+            const matchesSearch = !query || searchable.includes(query);
+            const show = matchesCategory && matchesSearch;
+            card.hidden = !show;
+            if (show) visible++;
+        });
+        count.innerHTML = `<strong>${visible}</strong> mod${visible > 1 ? "s" : ""} affiché${visible > 1 ? "s" : ""}`;
+        empty.hidden = visible !== 0;
+    };
+
+    filters.forEach((button) => button.addEventListener("click", () => {
+        activeFilter = button.dataset.filter;
+        filters.forEach((item) => {
+            const active = item === button;
+            item.classList.toggle("is-active", active);
+            item.setAttribute("aria-pressed", String(active));
+        });
+        applyFilters();
+    }));
+    search.addEventListener("input", applyFilters);
+    document.getElementById("mods-reset").addEventListener("click", () => {
+        search.value = "";
+        activeFilter = "all";
+        filters.forEach((item) => {
+            const active = item.dataset.filter === "all";
+            item.classList.toggle("is-active", active);
+            item.setAttribute("aria-pressed", String(active));
+        });
+        applyFilters();
+        search.focus();
+    });
+    document.addEventListener("keydown", (event) => {
+        if (event.key === "/" && !["INPUT", "TEXTAREA"].includes(document.activeElement.tagName)) {
+            event.preventDefault();
+            search.focus();
+        }
+    });
+
+    const copyButton = document.getElementById("copy-mods-path");
+    const copyStatus = document.getElementById("mods-copy-status");
+    copyButton.addEventListener("click", async () => {
+        try {
+            if (navigator.clipboard?.writeText) {
+                await navigator.clipboard.writeText(".minecraft/mods");
+            } else {
+                const field = document.createElement("textarea");
+                field.value = ".minecraft/mods";
+                field.setAttribute("readonly", "");
+                field.style.position = "fixed";
+                field.style.opacity = "0";
+                document.body.appendChild(field);
+                field.select();
+                const copied = document.execCommand("copy");
+                field.remove();
+                if (!copied) throw new Error("Copy unavailable");
+            }
+            copyStatus.textContent = "Chemin copié !";
+        } catch {
+            copyStatus.textContent = "Chemin : .minecraft/mods";
+        }
+        window.setTimeout(() => { copyStatus.textContent = ""; }, 2600);
+    });
+})();
+</script>
+</body>
+</html>
+

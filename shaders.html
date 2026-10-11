@@ -1,0 +1,289 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="MaxPela — Shaders recommandés pour l'aventure."
+    >
+
+    <title>MaxPela — Shaders</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+</head>
+
+<body>
+
+
+<!-- =========================================================
+     NAVIGATION
+========================================================= -->
+
+<header class="navbar">
+
+    <a href="index.html#accueil" class="logo">
+
+        <span>✦</span>
+
+        MAXPELA
+
+    </a>
+
+
+    <nav class="navigation">
+
+        <a href="index.html#aventure">
+            L'aventure
+        </a>
+
+        <a href="index.html#lore">
+            Lore
+        </a>
+
+        <a href="index.html#jouer">
+            Jouer
+        </a>
+
+        <a href="index.html#actualites">
+            Actualités
+        </a>
+
+        <a href="index.html#medias">
+            Médias
+        </a>
+
+        <a href="index.html#communaute">
+            Communauté
+        </a>
+
+        <a
+            href="https://discord.gg/DdwspU7JdT"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="discord-button"
+        >
+            <svg class="discord-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M19.7 5.3a18.4 18.4 0 0 0-4.5-1.4l-.6 1.2a16.8 16.8 0 0 0-5.2 0l-.6-1.2a18.4 18.4 0 0 0-4.5 1.4C1.5 9.5.7 13.6 1.1 17.6a18.5 18.5 0 0 0 5.5 2.8l1.2-2a12 12 0 0 1-1.9-.9l.5-.4a13.2 13.2 0 0 0 11.2 0l.5.4a12 12 0 0 1-1.9.9l1.2 2a18.5 18.5 0 0 0 5.5-2.8c.5-4.7-.8-8.8-3.2-12.3ZM8.7 15.3c-1.1 0-2-1-2-2.2s.9-2.2 2-2.2 2 .9 2 2.2-.9 2.2-2 2.2Zm6.6 0c-1.1 0-2-1-2-2.2s.9-2.2 2-2.2 2 .9 2 2.2-.9 2.2-2 2.2Z"/></svg> Rejoindre le Discord
+        </a>
+
+    </nav>
+
+
+    <a href="index.html#jouer" class="nav-button">
+        JOUER
+    </a>
+
+</header>
+
+
+<main class="page-main shader-page">
+
+    <section class="shader-hero" aria-label="Galerie de captures de Super Duper Vanilla">
+        <div class="shader-hero-image-wrap">
+            <img class="shader-hero-image" id="shader-showcase-image"
+                 src="https://cdn.modrinth.com/data/LMIZZNxZ/images/20f11c670f59dfb10bb9a058dfc67407d83b6ae8_350.webp"
+                 alt="Capture Caves and Cliffs — Midnight silence, issue de la galerie officielle Super Duper Vanilla"
+                 fetchpriority="high">
+        </div>
+        <div class="shader-hero-shade"></div>
+        <div class="shader-hero-copy">
+            <span class="eyebrow">LUMIÈRE · OMBRES · ATMOSPHÈRE</span>
+            <h1>Le monde<br><em>sous une autre lumière.</em></h1>
+            <p>Découvrez Super Duper Vanilla, un shader qui sublime l'esthétique de Minecraft tout en préservant son identité.</p>
+            <div class="shader-hero-actions">
+                <a href="#shader-guide" class="button button-primary">DÉCOUVRIR LE SHADER <span aria-hidden="true">↓</span></a>
+                <a href="https://modrinth.com/shader/super-duper-vanilla" target="_blank" rel="noopener noreferrer" class="button button-secondary">VOIR SUR MODRINTH ↗</a>
+            </div>
+        </div>
+        <div class="shader-carousel" aria-label="Commandes de la galerie">
+            <button type="button" class="shader-carousel-arrow" id="shader-previous" aria-label="Image précédente">←</button>
+            <span class="shader-carousel-count" id="shader-slide-count" aria-live="polite">01 / 04</span>
+            <div class="shader-carousel-dots" role="group" aria-label="Choisir une capture">
+                <button type="button" aria-label="Afficher la capture 1" aria-pressed="true" data-shader-slide="0"></button>
+                <button type="button" aria-label="Afficher la capture 2" aria-pressed="false" data-shader-slide="1"></button>
+                <button type="button" aria-label="Afficher la capture 3" aria-pressed="false" data-shader-slide="2"></button>
+                <button type="button" aria-label="Afficher la capture 4" aria-pressed="false" data-shader-slide="3"></button>
+            </div>
+            <button type="button" class="shader-carousel-arrow" id="shader-next" aria-label="Image suivante">→</button>
+        </div>
+        <a class="shader-image-credit" href="https://modrinth.com/shader/super-duper-vanilla/gallery" target="_blank" rel="noopener noreferrer">
+            Captures : © Eldeston / FlameRender Studios · Galerie officielle ↗
+        </a>
+    </section>
+
+    <section class="shader-page-content" id="shader-guide">
+        <header class="section-title shader-section-heading">
+            <p class="eyebrow">SÉLECTION MAXPELA</p>
+            <h2>Super Duper Vanilla</h2>
+            <p>Une lumière plus cinématique, des ombres travaillées et des paysages qui gardent le charme de Minecraft.</p>
+        </header>
+
+        <div class="shader-feature-layout">
+            <article class="shader-featured">
+                <div class="shader-featured-topline">
+                    <span class="shader-tag"><span aria-hidden="true">✦</span> SHADER CONSEILLÉ</span>
+                    <span class="shader-version-pill">VERSION 1.3.8</span>
+                </div>
+                <h3>Le style vanilla, sublimé.</h3>
+                <p class="shader-description">Super Duper Vanilla cherche à retrouver l'esprit visuel d'un Minecraft familier, avec une ambiance plus riche. Ses effets mettent notamment l'accent sur la lumière, les ombres, les reflets et la végétation.</p>
+                <div class="shader-info-grid" aria-label="Informations de compatibilité">
+                    <div><span>JEU COMPATIBLE INDIQUÉ</span><strong>Minecraft Java 1.21.8</strong></div>
+                    <div><span>CHARGEUR DE SHADERS</span><strong>Iris</strong></div>
+                    <div><span>STYLE</span><strong>Vanilla amélioré</strong></div>
+                    <div><span>CRÉATEUR</span><strong>Eldeston · FlameRender</strong></div>
+                </div>
+                <div class="shader-features" aria-label="Effets mis en avant">
+                    <span>☀️ Lumière</span><span>🌑 Ombres</span><span>🌊 Reflets</span><span>🌿 Végétation</span><span>✨ Bloom</span>
+                </div>
+                <div class="shader-actions">
+                    <a href="https://modrinth.com/shader/super-duper-vanilla" target="_blank" rel="noopener noreferrer" class="button button-primary">TÉLÉCHARGER SUR MODRINTH ↗</a>
+                    <a href="https://www.curseforge.com/minecraft/shaders/super-duper-vanilla-shaders" target="_blank" rel="noopener noreferrer" class="button button-secondary">CURSEFORGE ↗</a>
+                </div>
+            </article>
+
+            <aside class="shader-compatibility">
+                <span class="shader-compatibility-icon" aria-hidden="true">i</span>
+                <div>
+                    <span class="shader-aside-label">À VÉRIFIER AVANT L'INSTALLATION</span>
+                    <h3>Version du jeu</h3>
+                    <p>La page officielle indique une compatibilité jusqu'à Minecraft 1.21.8. La compatibilité avec Minecraft 26.3 n'y est pas confirmée.</p>
+                    <a href="https://modrinth.com/shader/super-duper-vanilla" target="_blank" rel="noopener noreferrer">Consulter les versions prises en charge ↗</a>
+                </div>
+            </aside>
+        </div>
+
+        <section class="shader-gallery-section" aria-labelledby="shader-gallery-title">
+            <div class="shader-gallery-heading">
+                <div><p class="eyebrow">APERÇUS EN JEU</p><h2 id="shader-gallery-title">Quelques instants de lumière</h2></div>
+                <a href="https://modrinth.com/shader/super-duper-vanilla/gallery" target="_blank" rel="noopener noreferrer">Toutes les captures sur Modrinth ↗</a>
+            </div>
+            <div class="shader-gallery-grid">
+                <a href="https://modrinth.com/shader/super-duper-vanilla/gallery" target="_blank" rel="noopener noreferrer" class="shader-gallery-shot shot-caves" style="--shader-shot: url('https://cdn.modrinth.com/data/LMIZZNxZ/images/20f11c670f59dfb10bb9a058dfc67407d83b6ae8_350.webp')"><span>Caves and Cliffs · Midnight silence</span><small>© Eldeston / FlameRender Studios</small></a>
+                <a href="https://modrinth.com/shader/super-duper-vanilla/gallery" target="_blank" rel="noopener noreferrer" class="shader-gallery-shot shot-crimson" style="--shader-shot: url('https://cdn.modrinth.com/data/LMIZZNxZ/images/432ac38ec5f8488ed4f1c55d266a284d740377e2_350.webp')"><span>Crimson Forest · Warmth</span><small>© Eldeston / FlameRender Studios</small></a>
+                <a href="https://modrinth.com/shader/super-duper-vanilla/gallery" target="_blank" rel="noopener noreferrer" class="shader-gallery-shot shot-golden" style="--shader-shot: url('https://cdn.modrinth.com/data/LMIZZNxZ/images/76d181ba04ce4e44554af5557f27cbda84d5bda0_350.webp')"><span>Caves and Cliffs · Golden hour</span><small>© Eldeston / FlameRender Studios</small></a>
+            </div>
+            <p class="shader-copyright-note">Captures présentées depuis la galerie officielle Modrinth. Super Duper Vanilla et ses images appartiennent à Eldeston / FlameRender Studios. <a href="https://github.com/Eldeston/Super-Duper-Vanilla/blob/master/LICENSE" target="_blank" rel="noopener noreferrer">Consulter la licence du projet ↗</a></p>
+        </section>
+
+        <section class="shader-installation shader-installation-new" aria-labelledby="shader-install-title">
+            <div class="shader-install-header">
+                <span class="eyebrow">EN QUELQUES ÉTAPES</span>
+                <h2 id="shader-install-title">Installation avec Iris</h2>
+                <p>Le fichier du shader se dépose dans le dossier shaderpacks, sans être décompressé.</p>
+            </div>
+            <ol class="shader-step-list">
+                <li><span>01</span><div><strong>Vérifiez la version de Minecraft</strong><p>Choisissez une version prise en charge par Super Duper Vanilla. La page officielle indique jusqu'à la version 1.21.8.</p></div></li>
+                <li><span>02</span><div><strong>Installez Iris</strong><p>Téléchargez Iris pour la même version de Minecraft et lancez une fois le profil Iris.</p></div></li>
+                <li><span>03</span><div><strong>Téléchargez le shader</strong><p>Récupérez Super Duper Vanilla depuis Modrinth ou CurseForge et gardez son fichier ZIP intact.</p></div></li>
+                <li><span>04</span><div><strong>Ajoutez-le à Minecraft</strong><p>Dans Options vidéo → Packs de shaders, ouvrez le dossier, puis placez-y le ZIP.</p><code>.minecraft/shaderpacks</code></div></li>
+                <li><span>05</span><div><strong>Activez-le en jeu</strong><p>Revenez à la liste des shaders, sélectionnez Super Duper Vanilla et validez.</p></div></li>
+            </ol>
+            <details class="shader-help">
+                <summary>Le shader n'apparaît pas dans la liste ?</summary>
+                <p>Vérifiez que vous avez lancé le profil Iris, que le fichier ZIP est directement dans <code>.minecraft/shaderpacks</code> et que vous n'avez pas extrait son contenu. Redémarrez le jeu après avoir ajouté le fichier.</p>
+            </details>
+        </section>
+
+        <div class="shader-page-footer-actions">
+            <a href="index.html#jouer" class="button button-secondary">← RETOUR À JOUER</a>
+            <a href="https://discord.gg/DdwspU7JdT" target="_blank" rel="noopener noreferrer" class="shader-question-link">Une question ? Rejoins la communauté MaxPela ↗</a>
+        </div>
+    </section>
+
+</main>
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer>
+
+    <div class="footer-links">
+
+        <a href="index.html#aventure">
+            L'aventure
+        </a>
+
+        <a href="index.html#lore">
+            Lore
+        </a>
+
+        <a href="index.html#jouer">
+            Jouer
+        </a>
+
+        <a href="index.html#actualites">
+            Actualités
+        </a>
+
+        <a href="index.html#communaute">
+            Communauté
+        </a>
+
+    </div>
+
+</footer>
+
+
+<script>
+(() => {
+    const image = document.getElementById("shader-showcase-image");
+    const counter = document.getElementById("shader-slide-count");
+    const dots = [...document.querySelectorAll("[data-shader-slide]")];
+    if (!image || !counter || !dots.length) return;
+
+    const slides = [
+        { src: "https://cdn.modrinth.com/data/LMIZZNxZ/images/20f11c670f59dfb10bb9a058dfc67407d83b6ae8_350.webp", alt: "Capture Caves and Cliffs — Midnight silence, galerie officielle Super Duper Vanilla" },
+        { src: "https://cdn.modrinth.com/data/LMIZZNxZ/images/432ac38ec5f8488ed4f1c55d266a284d740377e2_350.webp", alt: "Capture Crimson Forest — Warmth, galerie officielle Super Duper Vanilla" },
+        { src: "https://cdn.modrinth.com/data/LMIZZNxZ/images/76d181ba04ce4e44554af5557f27cbda84d5bda0_350.webp", alt: "Capture Caves and Cliffs — Golden hour, galerie officielle Super Duper Vanilla" },
+        { src: "https://cdn.modrinth.com/data/LMIZZNxZ/images/2d3c724ee0f4f337362918ff6625b9b3da4ad08a_350.webp", alt: "Capture End Island — The grand finale, galerie officielle Super Duper Vanilla" }
+    ];
+    let current = 0;
+    const show = (index) => {
+        current = (index + slides.length) % slides.length;
+        const selected = current;
+        const slide = slides[selected];
+        image.classList.add("is-changing");
+        const nextImage = new Image();
+        nextImage.onload = () => {
+            if (selected !== current) return;
+            image.src = nextImage.src;
+            image.alt = slide.alt;
+            image.classList.remove("is-changing");
+        };
+        nextImage.onerror = () => {
+            if (selected === current) image.classList.remove("is-changing");
+        };
+        nextImage.src = slide.src;
+        counter.textContent = `${String(current + 1).padStart(2, "0")} / ${String(slides.length).padStart(2, "0")}`;
+        dots.forEach((dot, i) => dot.setAttribute("aria-pressed", String(i === current)));
+    };
+    document.getElementById("shader-previous")?.addEventListener("click", () => show(current - 1));
+    document.getElementById("shader-next")?.addEventListener("click", () => show(current + 1));
+    dots.forEach((dot) => dot.addEventListener("click", () => show(Number(dot.dataset.shaderSlide))));
+})();
+</script>
+</body>
+
+</html>
+
+
+
